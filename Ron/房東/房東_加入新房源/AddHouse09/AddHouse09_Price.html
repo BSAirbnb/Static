@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>document</title>
+    <style>
+        /* .container-fluid{
+            height: 100%;
+        } */
+        .Question {
+            background-image: linear-gradient(#CC277D, #441CA2);
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Question>h3 {
+            text-align: center;
+            line-height: 3em;
+            font-size: 24px;
+            color: white;
+        }
+
+        @media screen and (min-width:768px) {
+            .Question {
+                background-image: linear-gradient(#CC277D, #441CA2);
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                
+            }
+
+            .Question>h3 {
+                text-align: center;
+                line-height: 3em;
+                font-size: 48px;
+                color: white;
+            }
+        }
+
+        .Options>.row {
+            height: 100vh;
+
+        }
+
+        /* 選項 */
+        .OptionCards {
+            max-height: 100px;
+            border: 2px solid #aaa;
+            border-radius: 5px;
+            padding: 20px;
+
+        }
+
+        .OptionCards>span {
+            margin: auto 0;
+            font-weight: 600;
+        }
+
+        .nextstep {
+            margin-top: auto;
+            /* max-height: 100px; */
+            border-top: 1px solid #aaa;
+        }
+        i{
+            font-size: 48px;
+        }
+
+        #input_price {
+            height: 100px;
+            width: 50%;
+            font-size: 36px;
+            text-align: center;
+            border-radius: 15px;
+            border:1px solid #B0B0B0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- 問題 -->
+            <div class="col-md-6 col-12  Question ">
+                <h3>有趣的部分來了！現在請設定價格</h3>
+
+            </div>
+            
+            <div class="col-md-6 col-12 Options  ">
+                <div class="row justify-content-center pt-5 ">
+                    <div class="col-10 col-md-8 my-auto text-center ">
+                        <button class="btn me-3"><i class="fas fa-minus-circle"></i></button>
+                        <input type="text" id="input_price" value="$500">
+                        <button class="btn ms-3"><i class="fas fa-plus-circle"></i></button>
+                        <div class="mt-3">每晚</div>
+                        <div class="mt-5 fs-3">請留意，與你的房源類似的住宿，價格通常落在 $603 至 $1,005 之間。</div>
+                    </div>
+
+                    <div class="col-12 nextstep  d-flex  py-4">
+                        <a href="#" class="text-black">返回</a>
+                        <!-- 這個a要接到房源管理 -->
+                        <button class="btn btn-danger ms-auto"><a href="#"
+                                class="text-decoration-none text-white">確定發佈</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
