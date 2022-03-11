@@ -14,9 +14,6 @@
 
     <title>document</title>
     <style>
-        /* .container-fluid{
-            height: 100%;
-        } */
         .Question {
             background-image: linear-gradient(#CC277D, #441CA2);
             height: 40vh;
@@ -49,32 +46,46 @@
             }
         }
 
-        .Options>.row {
-            height: 100vh;
+        @media screen and (max-width:767px) {
+            .Options>.OptionsRow8 {
+                height: calc(100% + 300px);
 
+            }
         }
 
         /* 選項 */
-        .OptionCards {
-            max-height: 100px;
-            border: 2px solid #aaa;
-            border-radius: 5px;
+        .OptionsRow8>.OptionCards {
+            height: 150px;
+            border: 2px solid #DDDDDD;
+            border-radius: 10px;
             padding: 20px;
+
+        }
+
+        .OptionCards>i {
+            margin: auto 1rem auto 0;
+            font-size: 36px;
 
         }
 
         .OptionCards>span {
             margin: auto 0;
             font-weight: 600;
+            font-size: 24px;
         }
 
         .nextstep {
-            margin-top: auto;
+            /* margin-top: auto; */
             /* max-height: 100px; */
+            background-color: white;
+            z-index: 2;
+            position: fixed;
+            bottom: 0px;
+            height: 100px;
             border-top: 1px solid #aaa;
         }
 
-        textarea {
+        .OptionsRow8 textarea {
             min-height: 300px;
             font-size: 20px;
             border: 1px solid #B0B0B0;
@@ -92,14 +103,16 @@
                 <h3>來為房源取名吧</h3>
             </div>
             <!-- 照片 -->
-            <div class="col-md-6 col-12 Options  ">
-                <div class="row justify-content-center pt-5 ">
-                    <div class="col-10 col-md-8 my-auto">
+            <div class="col-md-6 col-12 Options pt-5  ">
+                <div class="row justify-content-center pt-md-5 OptionsRow8 ">
+                    <div class="col-10 col-md-8 my-auto pt-md-5">
                         <h3 class="fw-bolder mb-4">撰寫房源描述</h3>
                         <textarea class="w-100" name="" id="" cols="10" rows="5" maxlength="500"
                             required>在這座寧靜的綠洲放鬆身心，好好度個假。</textarea>
                     </div>
-                    <div class="col-12 nextstep  d-flex  py-4">
+                </div>
+                <div class="row">
+                    <div class="col-12 nextstep  d-flex  p-4">
                         <a href="#" class="text-black">返回</a>
                         <button class="btn btn-dark ms-auto"><a href="#"
                                 class="text-decoration-none text-white">下一步</a></button>

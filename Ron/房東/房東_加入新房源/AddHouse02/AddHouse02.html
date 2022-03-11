@@ -12,9 +12,6 @@
 
     <title>document</title>
     <style>
-        /* .container-fluid{
-            height: 100%;
-        } */
         .Question {
             background-image: linear-gradient(#CC277D, #441CA2);
             height: 40vh;
@@ -45,30 +42,45 @@
                 font-size: 48px;
                 color: white;
             }
+
+
         }
 
-        .Options>.row {
-            height:100vh;
-            
+        @media screen and (max-width:767px) {
+            .Options>.OptionsRow2 {
+                height: calc(100% + 300px);
+
+            }
         }
+
+        /* .Options{
+        height: 100vh;
+        } */
 
         /* 選項 */
-        .OptionCards {
-            max-height: 100px;
-            border:1px solid #B0B0B0;
+        .OptionsRow2>.OptionCards {
+            height: 140px;
+            margin: 10px;
+            border: 1px solid #B0B0B0;
             border-radius: 5px;
             padding: 20px;
 
+
         }
 
-        .OptionCards>span {
+        .OptionsRow2 .OptionCards>span {
             margin: auto 0;
             font-weight: 600;
         }
 
         .nextstep {
-            margin-top: auto;
+            /* margin-top: auto; */
             /* max-height: 100px; */
+            background-color: white;
+            z-index: 2;
+            position: fixed;
+            bottom: 0px;
+            height: 100px;
             border-top: 1px solid #aaa;
         }
     </style>
@@ -82,22 +94,25 @@
                 <h3>房客會入住哪種空間?</h3>
             </div>
             <!-- 選項 -->
-            <div class="col-md-6 col-12 Options ">
-                <div class="row justify-content-center pt-5 " >
+            <div class="col-md-6 col-12 Options pt-5 ">
+                <div
+                    class="row justify-content-center  pt-5 OptionsRow2 align-content-md-center">
 
-                    <button class="col-8 OptionCards d-flex justify-content-between mt-5 btn bg-white ">
+                    <button class="col-8 OptionCards d-flex justify-content-between mt-md-5 btn bg-white ">
 
                         <span>整套房源</span>
                     </button>
-                    <button class="col-8 OptionCards d-flex justify-content-between mt-5 btn bg-white ">
+                    <button class="col-8 OptionCards d-flex justify-content-between mt-md-5 btn bg-white ">
 
                         <span>獨立房間</span>
                     </button>
-                    <button class="col-8 OptionCards d-flex justify-content-between mt-5 btn bg-white ">
+                    <button class="col-8 OptionCards d-flex justify-content-between mt-md-5 btn bg-white ">
 
                         <span>合住房間</span>
                     </button>
-                    <div class="col-12 nextstep  d-flex  py-4 ">
+                </div>
+                <div class="row">
+                    <div class="col-12 nextstep  d-flex  p-4">
                         <a href="#" class="text-black">返回</a>
                         <button class="btn btn-dark ms-auto"><a href="#"
                                 class="text-decoration-none text-white">下一步</a></button>
