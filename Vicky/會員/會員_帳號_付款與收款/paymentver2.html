@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index-style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>付款與收款</title>
+    <style>
+        /* 中間內容的容器 */
+        .content-box{
+            margin-top: 100px;
+        }
+        /* 標題列 */
+        .account:hover{
+            color: black;
+        }
+        .content-head .account,span{
+            color: rgb(72,72,72);
+        }
+        /* 選項切換列 */
+        .options{
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgb(220,220,220);
+        }
+        /* .options::after{
+            content: '';
+            flex-grow: 1;
+            width: 100px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgb(220,220,220);
+            margin-left: .7em;
+        } */
+        .options .pay{
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgb(66, 142, 144);
+            color: rgb(66, 142, 144);
+            font-weight: bold;
+        }
+        .options a{
+            color: rgb(72,72,72);
+            border-bottom: none;
+        }
+        /* 付款區塊 */
+        .payment-record-method button{
+            background-color: rgb(0,132,137);
+            padding: 10px 0;
+        }
+        .payment-record-method .manage-payment:hover{
+            border-bottom: none;
+        }
+        /* 禮物卡&coupon */
+        .gift-card-balance,.coupon-balance{
+            border-bottom: 1px solid rgb(220,220,220);
+        }
+        /* 右側提醒區塊 */
+        .reminder{
+            border: 1px solid rgb(220,220,220);
+        }
+        .reminder .clause,.reminder .detail{
+            color: rgb(0,132,137);
+        }
+        .reminder .clause:hover{
+            border-bottom: 1px solid rgb(0,132,137);
+        }
+        .reminder .detail:hover{
+            border-bottom: 1px solid rgb(0,132,137);
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-white border-bottom container-fluid">
+        <div class="container flex-nowrap">
+            <!-- 以下 logo 的連結記得要換 -->
+            <a href="./index.html" class="navbar-brand col-1">
+                <img src="./creatures of corner.png" alt="Creatures of Corner" class="logo">
+            </a> 
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle rounded-pill" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                    登入
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">註冊</a></li>
+                    <li><a class="dropdown-item" href="#">登入</a></li>
+                    <li><a class="dropdown-item" href="#">出租房源</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- content -->
+    <div class="container-fluid content-box">
+        <div class="container">
+            <!-- 標題列 -->
+            <div class="row content-head mb-3 mx-4">
+                <div class="col-10">
+                    <a href="#" class="fw-bold account">帳號</a>
+                    <span class="fw-bold mx-2">></span>
+                    <span class="fw-bold">付款與收款</span>
+                </div>
+                <div class="col-10">
+                    <span class="fs-2 fw-bold">付款與收款</span>
+                </div>
+            </div>
+            <!-- 選項切換列 -->
+            <div class="row options mx-4 mt-5">
+                <div class="col-10">
+                    <a href="#" class="pay me-2">付款</a>
+                    <a href="#" class="fw-bold mx-2">收款</a>
+                    <a href="#" class="fw-bold mx-2">稅款</a>
+                    <a href="#" class="fw-bold mx-2">捐款</a>
+                    <a href="#" class="fw-bold mx-2">旅客贈款</a>
+                </div>
+            </div>
+            <!-- 付款區塊 -->
+            <div class="row payment-record-method mt-4 mx-4 ">
+                <div class="col-10 col-md-7">
+                    <span class="fs-4 fw-bold d-block">付款紀錄</span>
+                    <span class="d-block text-black">追蹤所有付款和退款。</span>
+                    <button class="btn btn-lg px-4 fs-6 fw-bold mt-4"><a href="#" class="text-white manage-payment">管理付款</a>
+                    </button>
+                    <span class="fs-4 fw-bold d-block mt-4">付款方式</span>
+                    <span class="d-block text-black">使用我們的安全付款系統新增付款方式後，就能開始計畫下一趟旅程了。</span>
+                    <button class="btn btn-lg px-4 text-white fs-6 fw-bold mt-4">新增付款方式</button>
+                </div>
+                <!-- 提醒事項區塊 -->
+                <div class="col-md-4 ms-5 d-none d-md-block reminder">
+                    <i class="fas fa-money-bill-wave fs-3 d-block mt-4 mb-3 ms-3"></i>
+                    <span class="ms-2 fw-bold p-2">透過 Airbnb 支付所有款項</span>
+                    <span class="ms-2 d-block p-2">請務必透過 Airbnb 網站付款和溝通，以確保你受到我們的<a href="#" class="clause">《服務條款》</a>、<a href="#" class="clause">《支付服務條款》</a>、退訂及其他保障措施的保護。<a href="#" class="detail">了解詳情</a></span>
+                </div>
+                <!-- 禮物卡 -->
+                <div class="row gift-card">
+                    <div class="col-10 col-md-6">
+                        <span class="fs-4 fw-bold d-block mt-4">Airbnb禮物卡基金</span>
+                        <span class="text-black text-nowrap">兌換禮物卡，查看你的旅行基金餘額。</span>
+                        <a href="#" class="">適用相關條款</a>
+                        <div class=" gift-card-balance mt-3 py-3">
+                            <div class="balance d-flex justify-content-between">
+                                <div class="gift-card-label">
+                                    <span class="mt-4">目前禮物卡基金餘額</span>
+                                </div>
+                                <div class="price d-flex">
+                                    <span class="gift-card-amount">$0.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-lg px-4 text-white fs-6 fw-bold mt-4 d-block">新增禮物卡</button>
+                    </div>
+                </div>
+                <!-- 優惠券 -->
+                <div class="row coupon">
+                    <div class="col-10 col-md-6">
+                        <span class="fs-4 fw-bold d-block mt-4">優惠券</span>
+                        <span class="text-black text-nowrap d-block">新增優惠券，為下趟旅程省下旅費。</span>
+                        <div class="coupon-balance py-3 justify-content-between d-flex">
+                            <div class="coupon-label">
+                                <span class="d-inline-block mt-4">你的優惠券</span>
+                            </div>
+                            <div class="price d-flex">
+                                <span class="coupon-amount">0</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-lg px-4 text-white fs-6 fw-bold mt-4 d-block">新增優惠券</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-light w-100">
+        <div class="container my-3">
+            <div class="row justify-content-space-between">
+                <div class="col-12 col-md-3 border-bottom">  
+                    <ul>
+                        <li><h4 class="my-3">用戶支援</h4></li>
+                        <li class="my-2"><a href="">說明中心</a></li>
+                        <li class="my-2"><a href="">安全資訊</a></li>
+                        <li class="my-2"><a href="">退訂選項</a></li>
+                        <li class="my-2"><a href="">我們的新冠肺炎因應措施</a></li>
+                        <li class="my-2"><a href="">支援身心障礙人士</a></li>
+                        <li class="my-2"><a href="">回報社區問題</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 border-bottom">  
+                    <ul>
+                        <li><h4 class="my-3">社區</h4></li>
+                        <li class="my-2"><a href="">救災住宿</a></li>
+                        <li class="my-2"><a href="">支援阿富汗難民</a></li>
+                        <li class="my-2"><a href="">消弭歧視</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 border-bottom">  
+                    <ul>
+                        <li><h4 class="my-3">出租房源和舉辦體驗</h4></li>
+                        <li class="my-2"><a href="">開始出租／舉辦體驗</a></li>
+                        <li class="my-2"><a href="">保障房東和體驗達人</a></li>
+                        <li class="my-2"><a href="">瀏覽待客資源</a></li>
+                        <li class="my-2"><a href="">前往我們的社區論壇</a></li>
+                        <li class="my-2"><a href="">落實負責任出租和舉辦體驗的方法</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 border-bottom">  
+                    <ul>
+                        <li><h4 class="my-3">關於</h4></li>
+                        <li class="my-2"><a href="">新聞中心</a></li>
+                        <li class="my-2"><a href="">了解新功能</a></li>
+                        <li class="my-2"><a href="">創辦人的信</a></li>
+                        <li class="my-2"><a href="">工作機會</a></li>
+                        <li class="my-2"><a href="">投資人</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid fs-6">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <p class="text-center">
+                        &copy; 2022 Creatures of Corner, Inc.&nbsp; 
+                        <a href="">隱私</a>·
+                        <a href="">相關條款</a>·
+                        <a href="">網站地圖</a>
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center">
+                    <a href="https://facebook.com" class="social"><i class="fab fa-facebook-square fs-3 mx-2"></i></a>
+                    <a href="https://line.com" class="social"><i class="fab fa-line fs-3 mx-2"></i></a>
+                    <a href="https://instagram.com" class="social"><i class="fab fa-instagram-square fs-3 mx-2"></i></a>
+                    <a href="https://twitter.com" class="social"><i class="fab fa-twitter-square fs-3 mx-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
