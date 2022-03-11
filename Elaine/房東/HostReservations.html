@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./HostReservations.css">
+
+    <title>Airbnb 預定</title>
+  </head>
+  <body>
+    <section class="container-fluid d-flex justify-content-between mt-5">
+      <h1 class="h1_reservation"><i class="fas fa-angle-left"></i></i>預定</h1>
+
+      <div>
+        <!-- 篩選條件Btn -->
+        <div class="btn-group">
+          <button type="button" class="btn btn_filter" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-filter"></i></i>篩選條件
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"></a></li>
+            <li><a class="dropdown-item" href="#"></a></li>
+            <li><a class="dropdown-item" href="#"></a></li>
+          </ul>
+        </div>
+        <!-- 匯出Btn -->
+        <div class="btn-group">
+          <button type="button" class="btn btn_export" data-bs-toggle="dropdown" aria-expanded="false">
+            匯出<i class="fas fa-angle-down"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">下載CSV檔...</a></li>
+            <li><a class="dropdown-item" href="#">同步您的預定...</a></li>
+            <li><a class="dropdown-item" href="#">下載增值稅發票...</a></li>
+          </ul>
+        </div>
+        <!-- 列印Btn -->
+        <button class="btn btn_print">列印</button>
+      </div>
+    </section>
+
+    <section class="container-fluid tabs_container">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-upcoming-tab" data-bs-toggle="tab" data-bs-target="#nav-upcoming" type="button" role="tab" aria-controls="nav-upcoming" aria-selected="true">將至旅程</button>
+          <button class="nav-link" id="nav-finished-tab" data-bs-toggle="tab" data-bs-target="#nav-finished" type="button" role="tab" aria-controls="nav-finished" aria-selected="false">已完成</button>
+          <button class="nav-link" id="nav-canceled-tab" data-bs-toggle="tab" data-bs-target="#nav-canceled" type="button" role="tab" aria-controls="nav-canceled" aria-selected="false">已取消</button>
+          <button class="nav-link" id="nav-All-result-tab" data-bs-toggle="tab" data-bs-target="#nav-All-result" type="button" role="tab" aria-controls="nav-All-result" aria-selected="false">全部</button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-upcoming" role="tabpanel" aria-labelledby="nav-upcoming-tab">
+          <div class="tab_pane_text_upcoming">
+            <p>為全體用戶提供健康和安全指引</p>
+            <span>隨著旅遊業回溫，我們希望能保障全體社區的安全。如果和旅客會有互動，請遵守健康和安全指引。<a href="https://www.airbnb.com.tw/help/article/2839/airbnb-%E4%BD%8F%E5%AE%BF%E7%9A%84%E5%81%A5%E5%BA%B7%E5%92%8C%E5%AE%89%E5%85%A8%E8%A6%81%E6%B1%82" target="_blank">參閱指引</a> </span>
+          </div>
+          <div class="upcoming_check_all_reservations">
+            <p>您接下來沒有預訂</p>
+            <a href="#">查看所有預訂</a>
+          </div>
+
+          <!-- 動態生成 -->
+          <!-- <div class="reservations_upcoming">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">訂單狀態</th>
+                  <th scope="col">房客姓名</th>
+                  <th scope="col">訂房日期</th>
+                  <th scope="col">入住日期</th>
+                  <th scope="col">退房日期</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">已完成</th>
+                  <td>Mark</td>
+                  <td>2022-03-08</td>
+                  <td>2022-03-31</td>
+                  <td>2022-04-02</td>
+                  <td><button class="btn btn-primary text-white">詳細</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">已完成</th>
+                  <td>May</td>
+                  <td>2022-03-08</td>
+                  <td>2022-03-21</td>
+                  <td>2022-03-22</td>
+                  <td><button class="btn btn-primary text-white">詳細</button></td>
+                </tr>
+              </tbody>
+            </table> -->
+          <!-- </div> -->
+          <p class="share_your_oppinions">我們可以提供哪些協助，讓您管理預訂時更加輕鬆？<a href="#">分享您的意見</a> </p>
+        </div>
+
+        <div class="tab-pane fade" id="nav-finished" role="tabpanel" aria-labelledby="nav-finished-tab">
+          <div class="tab_pane_text">
+            <p>找不到結果</p>
+            <span>請嘗試不同的篩選條件。</span>
+          </div>
+          <p class="share_your_oppinions">我們可以提供哪些協助，讓您管理預訂時更加輕鬆？<a href="#">分享您的意見</a> </p>
+        </div>
+        <div class="tab-pane fade" id="nav-canceled" role="tabpanel" aria-labelledby="nav-canceled-tab">
+          <div class="tab_pane_text">
+            <p>找不到結果</p>
+            <span>請嘗試不同的篩選條件。</span>
+          </div>
+          <p class="share_your_oppinions">我們可以提供哪些協助，讓您管理預訂時更加輕鬆？<a href="#">分享您的意見</a> </p>
+        </div>
+        <div class="tab-pane fade" id="nav-All-result" role="tabpanel" aria-labelledby="nav-All-result-tab">
+          <div class="tab_pane_text">
+            <p>找不到結果</p>
+            <span>請嘗試不同的篩選條件。</span>
+          </div>
+          <p class="share_your_oppinions">我們可以提供哪些協助，讓您管理預訂時更加輕鬆？<a href="#">分享您的意見</a> </p>
+        </div>
+      </div>
+    </div>
+    </section>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
