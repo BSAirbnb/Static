@@ -1,0 +1,249 @@
+/*-------------------------------------- 404 page not found--------------- */
+.error-container {
+  text-align: center;
+  font-size: 200px;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 800;
+  margin: 110px 0 20px 0; /* (上右下左) */
+  background-color: #000;
+  padding-bottom: 50px;
+}
+
+#error h1 {
+  margin: 30px 0 30px 0;
+  color: #ff385c;
+  font-weight: bolder;
+}
+
+.error-container > span {
+  display: inline-block;
+  line-height: 0.7;
+  position: relative;
+  color: #ffb485;
+}
+.error-container > span {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+.error-container > span:nth-of-type(1) {
+  color: #d1f2a5;
+  animation: colordancing 4s infinite;
+}
+.error-container > span:nth-of-type(3) {
+  color: #f56991;
+  animation: colordancing2 4s infinite;
+}
+.error-container > span:nth-of-type(2) {
+  width: 120px;
+  height: 120px;
+}
+.error-container > span:nth-of-type(2):before,
+.error-container > span:nth-of-type(2):after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 999px; /* 外部邊框圓角設定 */
+  box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
+    /* X軸 Y軸 模糊範圍 */ inset 0 30px 0 rgba(239, 250, 180, 0.4),
+    inset -30px 0 0 rgba(255, 196, 140, 0.4),
+    inset 0 -30px 0 rgba(245, 105, 145, 0.4);
+  /* inset：用來設定內陰影，選擇性項目，無填寫代表呈現為外陰影 */
+  /* offset-x：x 軸方向的陰影大小，單位為長度單位，如 em、px 等。 */
+  /* offset-y：y 軸方向的陰影大小，單位為長度單位，如 em、px 等。 */
+  /* blur-radius：模糊半徑，選擇性項目，未填寫則為預設值零。 */
+  animation: shadowsdancing 4s infinite;
+}
+.error-container > span:nth-of-type(2):before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.screen-reader-text {
+  position: absolute;
+  top: -9999em;
+  left: -9999em;
+}
+@keyframes shadowsdancing {
+  0% {
+    box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
+      inset 0 30px 0 rgba(239, 250, 180, 0.4),
+      inset -30px 0 0 rgba(255, 196, 140, 0.4),
+      inset 0 -30px 0 rgba(245, 105, 145, 0.4);
+  }
+  25% {
+    box-shadow: inset 30px 0 0 rgba(245, 105, 145, 0.4),
+      inset 0 30px 0 rgba(209, 242, 165, 0.4),
+      inset -30px 0 0 rgba(239, 250, 180, 0.4),
+      inset 0 -30px 0 rgba(255, 196, 140, 0.4);
+  }
+  50% {
+    box-shadow: inset 30px 0 0 rgba(255, 196, 140, 0.4),
+      inset 0 30px 0 rgba(245, 105, 145, 0.4),
+      inset -30px 0 0 rgba(209, 242, 165, 0.4),
+      inset 0 -30px 0 rgba(239, 250, 180, 0.4);
+  }
+  75% {
+    box-shadow: inset 30px 0 0 rgba(239, 250, 180, 0.4),
+      inset 0 30px 0 rgba(255, 196, 140, 0.4),
+      inset -30px 0 0 rgba(245, 105, 145, 0.4),
+      inset 0 -30px 0 rgba(209, 242, 165, 0.4);
+  }
+  100% {
+    box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
+      inset 0 30px 0 rgba(239, 250, 180, 0.4),
+      inset -30px 0 0 rgba(255, 196, 140, 0.4),
+      inset 0 -30px 0 rgba(245, 105, 145, 0.4);
+  }
+}
+@keyframes colordancing {
+  0% {
+    color: #d1f2a5;
+  }
+  25% {
+    color: #f56991;
+  }
+  50% {
+    color: #ffc48c;
+  }
+  75% {
+    color: #effab4;
+  }
+  100% {
+    color: #d1f2a5;
+  }
+}
+@keyframes colordancing2 {
+  0% {
+    color: #ffc48c;
+  }
+  25% {
+    color: #effab4;
+  }
+  50% {
+    color: #d1f2a5;
+  }
+  75% {
+    color: #f56991;
+  }
+  100% {
+    color: #ffc48c;
+  }
+}
+
+/* demo stuff */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#error body {
+  margin-bottom: 50px;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  color: #92a4ad;
+}
+h1 {
+  text-align: center;
+  margin: 30px 15px;
+}
+.zoom-area {
+  max-width: 490px;
+  margin: 30px auto 30px;
+  font-size: 19px;
+  text-align: center;
+}
+.link-container {
+  text-align: center;
+}
+a.go-to-home-page-link {
+  text-transform: capitalize; /* 字首大寫 */
+  font-size: 18px;
+  background-color: #ff385c;
+  padding: 15px 15px;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  margin-bottom: 5px;
+  line-height: 1.5;
+  text-decoration: none;
+  margin-top: 50px;
+  letter-spacing: 1px;
+}
+
+a.go-to-home-page-link:hover {
+  text-decoration: none;
+  color: #000;
+  font-weight: bolder;
+}
+
+/* ----------------------------------------產品分頁------------------------------------- */
+.admin-product-top {
+  text-align: center;
+  margin: 15px 0 20px 0;
+}
+
+.admin-product-top-span {
+  font-size: 30px;
+}
+
+.fa-plus {
+  padding-right: 7px;
+  color: white;
+  font-size: 14px;
+}
+
+.nav-tabs {
+  border-bottom: none !important;
+}
+
+.nav-tabs a {
+  color: #495057;
+  margin-left: 15px;
+}
+
+.nav-tabs a:hover {
+  text-decoration: none;
+  color: #495057;
+  padding: 5px;
+  font-size: 25px;
+}
+
+.text-center {
+  margin-bottom: 15px;
+}
+
+.card-body img {
+  opacity: 1;
+}
+
+.card-body ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  text-align: left;
+}
+
+.card-body li {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.admin-product-table td {
+  text-align: left;
+  padding: 6px;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+}

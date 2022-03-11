@@ -1,0 +1,138 @@
+.btn:focus {
+  box-shadow: none;
+}
+
+.h1_reservation {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #484848;
+}
+
+/* icon */
+.fa-angle-left {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.fa-angle-down {
+  padding-left: 7px;
+}
+
+.btn_filter,
+.btn_export {
+  color: #484848;
+  font-size: 14px;
+  border: 1px solid #ebebeb;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+.btn_print {
+  color: #008489;
+  border: 1px solid #008489;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+}
+
+.btn_print:hover {
+  color: #008489;
+}
+
+.tabs_container {
+  margin: 2em 0;
+}
+
+/* tab button */
+.tabs_container button {
+  color: #484848;
+  font-weight: bolder;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: transparent;
+}
+.nav-tabs .nav-link.active {
+  color: #008489;
+  outline: none;
+  border-color: transparent;
+  border-bottom: 2px solid #008489;
+}
+
+.tabs_container button:hover {
+  color: #484848;
+}
+
+.tabs_container button:active,
+.tabs_container button:visited {
+  color: #008489;
+}
+
+.tab_pane_text_upcoming {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #ebebeb;
+  margin: 2em 0;
+  padding: 1.5em;
+  border-radius: 10px;
+}
+
+.tab_pane_text_upcoming a {
+  color: #008489;
+  text-decoration: none;
+}
+
+.upcoming_check_all_reservations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8em 0;
+  border-bottom: 1px solid #dfdbdb;
+}
+
+.upcoming_check_all_reservations a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #008489;
+}
+
+.upcoming_check_all_reservations a:hover,
+.share_your_oppinions a:hover {
+  text-decoration: underline;
+}
+
+.tab_pane_text {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #dfdbdb;
+}
+
+.upcoming_check_all_reservations p,
+.tab_pane_text p {
+  font-weight: bolder;
+  color: #484848;
+  font-size: 18px;
+  margin: 0;
+}
+
+.tab_pane_text span {
+  color: #484848;
+  font-size: 18px;
+}
+
+.share_your_oppinions {
+  padding: 5em 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.share_your_oppinions a {
+  text-decoration: none;
+  color: #008489;
+}
