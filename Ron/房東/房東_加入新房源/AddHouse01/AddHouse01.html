@@ -12,64 +12,61 @@
 
     <title>document</title>
     <style>
-        /* .container-fluid{
-            height: 100%;
-        } */
         .Question {
-            background-image: linear-gradient(#CC277D, #441CA2);
-            height: 40vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        background-image: linear-gradient(#CC277D, #441CA2);
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         }
 
         .Question>h3 {
-            text-align: center;
-            line-height: 3em;
-            font-size: 24px;
-            color: white;
+        text-align: center;
+        line-height: 3em;
+        font-size: 24px;
+        color: white;
         }
 
         @media screen and (min-width:768px) {
-            .Question {
-                background-image: linear-gradient(#CC277D, #441CA2);
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .Question>h3 {
-                text-align: center;
-                line-height: 3em;
-                font-size: 48px;
-                color: white;
-            }
+        .Question {
+        background-image: linear-gradient(#CC277D, #441CA2);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         }
 
+        .Question>h3 {
+        text-align: center;
+        line-height: 3em;
+        font-size: 48px;
+        color: white;
+        }
+        }
 
+        .Options>.row {
+        height:100vh;
+
+        }
 
         /* 選項 */
-        .Options{
-            max-height: 100vh;
-        }
         .OptionCards {
-            max-height: 100px;
-            border: 2px solid #aaa;
-            border-radius: 5px;
-            padding: 20px;
-            border:1px solid #B0B0B0;
+        max-height: 100px;
+        border:1px solid #B0B0B0;
+        border-radius: 5px;
+        padding: 20px;
 
         }
 
         .OptionCards>span {
-            margin: auto 0;
-            font-weight: 600;
+        margin: auto 0;
+        font-weight: 600;
         }
 
         .nextstep {
-            margin-top: auto;
-            border-top: 1px solid #aaa;
+        margin-top: auto;
+        /* max-height: 100px; */
+        border-top: 1px solid #aaa;
         }
     </style>
 </head>
@@ -103,11 +100,11 @@
                         <span>家庭式旅館</span>
                         <img src="./add01_05.jpg" alt="">
                     </button>
-                    <button class="col-8 OptionCards d-flex justify-content-between mt-3 btn bg-white ">
+                    <button class="col-8 OptionCards d-flex justify-content-between mt-3 btn bg-white mb-3 ">
                         <span>精品旅店</span>
                         <img src="./add01_06.jpg" alt="">
                     </button>
-                    <div class="col-12 nextstep mt-5 d-flex  p-4">
+                    <div class="col-12 nextstep  d-flex  p-4">
                         <a href="#" class="text-black">返回</a>
                         <button class="btn btn-dark ms-auto"><a href="#"
                                 class="text-decoration-none text-white">下一步</a></button>
