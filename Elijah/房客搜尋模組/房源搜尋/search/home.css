@@ -1,0 +1,41 @@
+.intro{
+    height: 400px;
+    margin: 50px;
+    border-radius: 50px;
+    background: rgb(248, 61, 61);
+    box-shadow: 3px 3px 20px rgb(248, 61, 61);
+}
+.intro p{
+    font-size: 50px;
+    text-shadow: 10px 10px 15px rgb(0, 0, 0);
+}
+.intro-bg{
+    background: rgb(58, 58, 58);
+    margin-top: 200px;
+}
+
+.search-bar{
+    height: 100px;
+    position: fixed;
+    top: 80px;
+    z-index: 3;
+    background: #fff;
+}
+.search-info{
+    width: 600px;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.banner-img p{
+    font-size: 40px;
+    padding-right: 50px;
+    bottom: 20%;
+    color: rgb(255, 255, 255);
+}
+.banner-img img{
+    border-radius: 50px;
+    box-shadow: 1px 1px 5px #000;
+    padding: 0;
+}
