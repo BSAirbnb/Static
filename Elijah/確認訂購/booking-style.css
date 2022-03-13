@@ -3,5 +3,21 @@
 }
 
 .confirm{
-    margin-top: 80px;
+    margin-top: 160px;
+}
+
+.page-title{
+    position: fixed;
+    top: 85px;
+    z-index: 4;
+    background-color: #fff;
+}
+.imgbox{
+    width: 125px;
+    height: 95px;
+}
+#roomimg{
+    object-fit: contain;
+    width: 100%;
+    min-width: 125px;
 }
