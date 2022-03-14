@@ -23,9 +23,8 @@
         /* 選項切換列 */
         .options{
             padding-bottom: 15px;
-            /* border-bottom: 1px solid rgb(220,220,220); */
         }
-        .options .pay{
+        .options .payout{
             padding-bottom: 15px;
             border-bottom: 2px solid rgb(66, 142, 144);
             color: rgb(66, 142, 144);
@@ -35,30 +34,36 @@
             color: rgb(72,72,72);
             border-bottom: none;
         }
-        /* 付款區塊 */
-        .payment-record-method button{
+        /* 收款區塊 */
+        .payout-method button{
             background-color: rgb(0,132,137);
             padding: 10px 0;
         }
-        .payment-record-method .manage-payment:hover{
-            border-bottom: none;
-        }
-        /* 禮物卡&coupon */
-        .gift-card-balance,.coupon-balance{
-            border-bottom: 1px solid rgb(220,220,220);
-        }
-        /* 右側提醒區塊 */
-        .reminder{
-            border: 1px solid rgb(220,220,220);
-        }
-        .reminder .clause,.reminder .detail{
+        .a_faq,.a_detail{
             color: rgb(0,132,137);
         }
-        .reminder .clause:hover{
+        .a_faq:hover{
             border-bottom: 1px solid rgb(0,132,137);
         }
-        .reminder .detail:hover{
+        .a_detail:hover{
             border-bottom: 1px solid rgb(0,132,137);
+        }
+        .manage-payment:hover{
+            border-bottom: none;
+        }
+        /* 右側常見問題區塊 */
+        .faq{
+            border: 1px solid rgb(220,220,220);
+        }
+        .faq-content {
+            color: rgb(0,132,137);
+            font-weight: bold;
+        }
+        .faq-content:hover{
+            text-decoration: underline;
+        }
+        .faq-link:hover{
+            border-bottom:none;
         }
 
     </style>
@@ -102,64 +107,55 @@
             <div class="row options mx-4 mt-5">
                 <div class="col-10">
                     <ul class="nav nav-tabs">
-                        <a href="#" class="pay me-2">付款</a>
-                        <a href="#" class="fw-bold mx-2">收款</a>
+                        <a href="#" class="fw-bold me-2">付款</a>
+                        <a href="#" class="payout fw-bold mx-2">收款</a>
                         <a href="#" class="fw-bold mx-2">稅款</a>
                         <a href="#" class="fw-bold mx-2">捐款</a>
                         <a href="#" class="fw-bold mx-2">旅客贈款</a>
                     </ul>
                 </div>
             </div>
-            <!-- 付款區塊 -->
-            <div class="row payment-record-method mt-4 mx-4 ">
+            <!-- 收款區塊 -->
+            <div class="row payout-method mt-4 mx-4">
                 <div class="col-10 col-md-7">
-                    <span class="fs-4 fw-bold d-block">付款紀錄</span>
-                    <span class="d-block text-black">追蹤所有付款和退款。</span>
-                    <button class="btn btn-lg px-4 fs-6 fw-bold mt-4"><a href="#" class="text-white manage-payment">管理付款</a>
+                    <span class="fs-4 fw-bold d-block">收款方式</span>
+                    <span class="d-block">當你收到預定款項時，我們會將該付款稱為「收款」。我們的安全支付系統支援多種收款方式，你可以在下方設定。<a href="#" class="a_faq">前往常見問題。</a></span>
+                    <span class="fw-bold d-block mt-3">若要獲得收款，請設定一種收款方式</span>
+                    <span>Airbnb 會在房客預計入住時間大約 24 小時後發放收款。款項入帳所需時間取決於你的收款方式。<a href="#" class="a_detail">了解詳情</a></span>
+                    <button class="btn btn-lg px-4 fs-6 fw-bold mt-4 d-block mb-5"><a href="#" class="text-white manage-payment">新增收款方式</a>
                     </button>
-                    <span class="fs-4 fw-bold d-block mt-4">付款方式</span>
-                    <span class="d-block text-black">使用我們的安全付款系統新增付款方式後，就能開始計畫下一趟旅程了。</span>
-                    <button class="btn btn-lg px-4 text-white fs-6 fw-bold mt-4">新增付款方式</button>
                 </div>
                 <!-- 提醒事項區塊 -->
-                <div class="col-md-4 ms-5 d-none d-md-block reminder">
-                    <i class="fas fa-money-bill-wave fs-3 d-block mt-4 mb-3 ms-3"></i>
-                    <span class="ms-2 fw-bold p-2">透過 Airbnb 支付所有款項</span>
-                    <span class="ms-2 d-block p-2">請務必透過 Airbnb 網站付款和溝通，以確保你受到我們的<a href="#" class="clause">《服務條款》</a>、<a href="#" class="clause">《支付服務條款》</a>、退訂及其他保障措施的保護。<a href="#" class="detail">了解詳情</a></span>
-                </div>
-                <!-- 禮物卡 -->
-                <div class="row gift-card">
-                    <div class="col-10 col-md-6">
-                        <span class="fs-4 fw-bold d-block mt-4">Airbnb禮物卡基金</span>
-                        <span class="text-black text-nowrap">兌換禮物卡，查看你的旅行基金餘額。</span>
-                        <a href="#" class="">適用相關條款</a>
-                        <div class=" gift-card-balance mt-3 py-3">
-                            <div class="balance d-flex justify-content-between">
-                                <div class="gift-card-label">
-                                    <span class="mt-4">目前禮物卡基金餘額</span>
+                <div class="col-md-4 ms-auto faq">
+                    <i class="fas fa-book-open fs-3 d-block mt-4 mb-3 ms-3"></i>
+                    <span class="fw-bold p-2 fs-4">常見問題</span>
+                    <div class="faq-container ms-2">
+                        <ul class="nav nav-tabs">
+                            <a href="#" class="py-3 faq-link">
+                                <div>
+                                    <span class="faq-content">收款如何運作</span>
                                 </div>
-                                <div class="price d-flex">
-                                    <span class="gift-card-amount">$0.00</span>
+                            </a>
+                        </ul>
+                        
+                        <ul class="nav nav-tabs">
+                            <a href="#" class="py-3 faq-link">
+                                <div>
+                                    <span class="faq-content">新增收款資料</span>
                                 </div>
-                            </div>
-                        </div>
-                        <button class="btn btn-lg px-4 text-white fs-6 fw-bold mt-4 d-block">新增禮物卡</button>
-                    </div>
-                </div>
-                <!-- 優惠券 -->
-                <div class="row coupon">
-                    <div class="col-10 col-md-6">
-                        <span class="fs-4 fw-bold d-block mt-4">優惠券</span>
-                        <span class="text-black text-nowrap d-block">新增優惠券，為下趟旅程省下旅費。</span>
-                        <div class="coupon-balance py-3 justify-content-between d-flex">
-                            <div class="coupon-label">
-                                <span class="d-inline-block mt-4">你的優惠券</span>
-                            </div>
-                            <div class="price d-flex">
-                                <span class="coupon-amount">0</span>
-                            </div>
-                        </div>
-                        <button class="btn btn-lg px-4 text-white fs-6 fw-bold mt-4 d-block">新增優惠券</button>
+                            </a>
+                        </ul>
+
+                        <ul class="nav">
+                            <a href="#" class="py-3 d-flex faq-link">
+                                <div class="">
+                                    <span class="faq-content">我什麼時候會收到收款?</span>
+                                </div>
+                                <div class="me-0">
+                                    <!-- <span >></span> -->
+                                </div>
+                            </a>
+                        </ul>
                     </div>
                 </div>
             </div>
