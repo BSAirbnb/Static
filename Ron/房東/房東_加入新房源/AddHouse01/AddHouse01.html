@@ -13,60 +13,79 @@
     <title>document</title>
     <style>
         .Question {
-        background-image: linear-gradient(#CC277D, #441CA2);
-        height: 40vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+            background-image: linear-gradient(#CC277D, #441CA2);
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .Question>h3 {
-        text-align: center;
-        line-height: 3em;
-        font-size: 24px;
-        color: white;
+            text-align: center;
+            line-height: 3em;
+            font-size: 24px;
+            color: white;
         }
 
         @media screen and (min-width:768px) {
-        .Question {
-        background-image: linear-gradient(#CC277D, #441CA2);
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+            .Question {
+                background-image: linear-gradient(#CC277D, #441CA2);
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Question>h3 {
+                text-align: center;
+                line-height: 3em;
+                font-size: 48px;
+                color: white;
+            }
+
+            .nextstep {
+                width: 50vw;
+            }
+
+
         }
 
-        .Question>h3 {
-        text-align: center;
-        line-height: 3em;
-        font-size: 48px;
-        color: white;
-        }
+        @media screen and (max-width:767px) {
+            .Options>.OptionsRow1 {
+                height: calc(100% + 300px);
+
+            }
         }
 
-        .Options>.row {
-        height:100vh;
-
-        }
+        /* .Options{
+            height: 100vh;
+        } */
 
         /* 選項 */
-        .OptionCards {
-        max-height: 100px;
-        border:1px solid #B0B0B0;
-        border-radius: 5px;
-        padding: 20px;
+        .OptionsRow1>.OptionCards {
+            height: 100px;
+            margin: 10px;
+            border: 1px solid #B0B0B0;
+            border-radius: 5px;
+            padding: 20px;
+
 
         }
 
-        .OptionCards>span {
-        margin: auto 0;
-        font-weight: 600;
+        .OptionsRow1 .OptionCards>span {
+            margin: auto 0;
+            font-weight: 600;
         }
 
         .nextstep {
-        margin-top: auto;
-        /* max-height: 100px; */
-        border-top: 1px solid #aaa;
+            /* margin-top: auto; */
+            /* max-height: 100px; */
+            background-color: white;
+            z-index: 2;
+            position: fixed;
+            bottom: 0px;
+            height: 100px;
+            border-top: 1px solid #aaa;
         }
     </style>
 </head>
@@ -80,30 +99,28 @@
             </div>
             <!-- 選項 -->
             <div class="col-md-6 Options">
-                <div class="row justify-content-center  pt-3">
-
-                    <button class="col-8 OptionCards d-flex justify-content-between mt-3 btn bg-white ">
+                <div class="row justify-content-center  pt-5 OptionsRow1 mb-3 align-content-center align-items-center ">
+                    <button class="col-8 OptionCards d-flex justify-content-between mt-md-3 btn bg-white ">
                         <span>公寓</span>
                         <img src="./add01_01_apart.jpg" alt="">
                     </button>
-                    <button class="col-8 OptionCards d-flex justify-content-between mt-3 btn bg-white ">
+                    <button class="col-8 OptionCards d-flex justify-content-between mt-md-3 btn bg-white ">
                         <span>獨棟房屋</span>
                         <img src="./add01_02.jpg" alt="">
                     </button>
 
                     </button>
-                    <button class="col-8 OptionCards d-flex justify-content-between mt-3 btn bg-white ">
+                    <button class="col-8 OptionCards d-flex justify-content-between mt-md-3 btn bg-white ">
                         <span>獨特房源</span>
                         <img src="./add01_04.jpg" alt="">
                     </button>
-                    <button class="col-8 OptionCards d-flex justify-content-between mt-3 btn bg-white ">
+                    <button class="col-8 OptionCards d-flex justify-content-between mt-md-3btn bg-white ">
                         <span>家庭式旅館</span>
                         <img src="./add01_05.jpg" alt="">
                     </button>
-                    <button class="col-8 OptionCards d-flex justify-content-between mt-3 btn bg-white mb-3 ">
-                        <span>精品旅店</span>
-                        <img src="./add01_06.jpg" alt="">
-                    </button>
+
+                </div>
+                <div class="row">
                     <div class="col-12 nextstep  d-flex  p-4">
                         <a href="#" class="text-black">返回</a>
                         <button class="btn btn-dark ms-auto"><a href="#"

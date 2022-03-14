@@ -39,6 +39,13 @@
 .search-bar{
     width: 200px;
 }
+/* .search-bar{
+    height: 65px;
+    position: fixed;
+    top: 80px;
+    z-index: 3;
+    background: #fff;
+} */
 /* .search-info{
     width: 600px;
     border: 1px solid #aaa;

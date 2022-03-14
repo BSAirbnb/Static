@@ -1,0 +1,28 @@
+.carousel.slide{
+    margin-top: 100px;
+}
+
+.room-title{
+    border-bottom: 1px solid #000;
+}
+
+#reserve-btn{
+    width: 100px;
+    position: fixed;
+    bottom: 150px;
+    right: 100px;
+}
+
+#review-bar{
+    width: 40%;
+    height: 2px;
+    background: rgb(143, 143, 143);
+    align-self: center;
+}
+#review-bar-dark{
+    
+    width: 90%;
+    height: 2px;
+    background: #000;
+    align-self: center;
+}
