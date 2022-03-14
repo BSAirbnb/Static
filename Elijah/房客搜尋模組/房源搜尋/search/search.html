@@ -681,9 +681,9 @@
                 <div class="modal-body">
                     <div class="container-fluid filter-option border-bottom">
                         <p class="fs-5 fw-bold">臥室和床鋪</p>
-                        <div class="row">
-                            <div class="col-md-8">床位</div>
-                            <div class="col-md-4 d-flex justify-content-end">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>床位</div>
+                            <div class="d-flex justify-content-end">
                                 <button type="button" class="btn"><i class="fas fa-minus-circle fs-4"></i>
                                 </button>
                                 <span class="my-auto" id="bed">0</span>
@@ -691,9 +691,9 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-8">臥室</div>
-                            <div class="col-md-4 d-flex justify-content-end">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>臥室</div>
+                            <div class="d-flex justify-content-end">
                                 <button type="button" class="btn"><i class="fas fa-minus-circle fs-4"></i>
                                 </button>
                                 <span class="my-auto" id="bedroom">0</span>
@@ -701,9 +701,9 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="row mb-4">
-                            <div class="col-md-8">衛浴</div>
-                            <div class="col-md-4 d-flex justify-content-end">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div>衛浴</div>
+                            <div class="d-flex justify-content-end">
                                 <button type="button" class="btn"><i class="fas fa-minus-circle fs-4"></i>
                                 </button>
                                 <span class="my-auto" id="bathroom">0</span>
@@ -1010,19 +1010,8 @@
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-
-    <script>
-        var windowHeight = window.innerHeight;
-        console.log(windowHeight);
-    </script>
-    <script>
-        $(function(){
-            $('#datepicker-start').datepicker();
-            $('#datepicker-end').datepicker();
-        });
-    </script>
-
-
+    <script src="./search.js"></script>
+    
 </body>
 
 </html>
