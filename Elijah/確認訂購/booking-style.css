@@ -8,8 +8,8 @@
 
 .page-title{
     position: fixed;
-    top: 85px;
-    z-index: 4;
+    top: 83px;
+    z-index: 2;
     background-color: #fff;
 }
 .imgbox{
@@ -37,4 +37,8 @@ h3{
 .landlord-message div{
     font-size: 14px;
     line-height: 18px 
+}
+#right{
+    position: sticky;
+    top: 153px;
 }
