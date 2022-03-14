@@ -80,7 +80,7 @@
                     <div>
                         <div class="d-flex justify-content-between fw-bold">
                             <p class="mb-0">日期</p>
-                            <p class="mb-0">編輯</p>
+                            <button class="btn btn-link mb-0" data-bs-toggle="modal" data-bs-target="#editModal">編輯</button>
                         </div>
                         <p>4月5日至7日</p>
                     </div>
@@ -202,6 +202,53 @@
             </div>
         </div>
     </div>
+    <!-- 編輯Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="d-flex justify-content-center">
+                        <div class="mx-2 d-flex flex-column">
+                            
+                            <section class="container">
+                                <form class="row flex-column">
+                                    <div><input placeholder="位置" class="form-control"></div>
+                                    <label for="date" class="col-2 col-form-label">日期</label>
+                                    <div class="col-10">
+                                        <div class="input-group date" id="datepicker-start">
+                                            <input type="text" class="form-control" id="date"/>
+                                            <span class="input-group-append">
+                                                <span class="input-group-text bg-light d-block">
+                                                <i class="fa fa-calendar"></i>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="my-3">至</span>
+                                    <div class="col-10">
+                                        <div class="input-group date" id="datepicker-end">
+                                            <input type="text" class="form-control" id="date"/>
+                                            <span class="input-group-append">
+                                                <span class="input-group-text bg-light d-block">
+                                                <i class="fa fa-calendar"></i>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div><input type="number" placeholder="人數" class="form-control mt-3"></div>
+                                    <button class="btn btn-outline-success rounded-pill my-3" type="submit">搜尋</button>
+                                </form>
+                            </section>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="bg-light w-100">
         <div class="container-fluid fs-6 w-75">
@@ -229,6 +276,15 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="./slideshow.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script>
+        $(function(){
+            $('#datepicker-start').datepicker();
+            $('#datepicker-end').datepicker();
+        });
+    </script>
 </body>
 
 </html>
