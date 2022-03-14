@@ -43,6 +43,17 @@
                 color: white;
             }
 
+            .nextstep {
+                width: 50vw;
+            }
+
+            #detail_address {
+                background-color: white;
+                border: 1px solid #aaa;
+                border-radius: 5px;
+                min-height: 60vh;
+                width: 40vw;
+            }
 
         }
 
@@ -50,6 +61,10 @@
             .Options>.OptionsRow3 {
                 height: calc(100vh + 200px);
 
+            }
+
+            #detail_address {
+                width: 80vw;
             }
         }
 
@@ -87,17 +102,13 @@
         #map {
             /* 給地圖寬跟高 */
             width: 100%;
-            min-height: 70vh;
+            height: calc(100vh - 100px);
+            margin-bottom: 100px;
             /* 詳細設定且為手機時地圖不見 */
             /* display: none; */
         }
 
-        #detail_address {
-            background-color: white;
-            border: 1px solid #aaa;
-            border-radius: 5px;
-            min-height: 60vh;
-        }
+
 
         /* 第一步地址搜尋列 */
         #first_address {
@@ -112,6 +123,10 @@
 
         /* 詳細地址框 */
         #detail_address {
+            background-color: white;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            min-height: 60vh;
             position: absolute;
             /* 到時候隱藏改zindex :0 */
             z-index: 2;
@@ -151,7 +166,7 @@
                     </div>
                     <!-- 詳細確認地址modal 找到地址後才要顯示-->
                     <div class="col-12 col-md-8 d-flex align-content-between " id="detail_address">
-                        <form>
+                        <form class="w-100">
                             <button id="btn_BackToFirstAddress" class="btn btn-light bg-white fs-3 fw-bolder border-0">
                                 <<</button> <h2 class="text-center fs-5 fw-bolder">確認您的地址</h2>
                                     <div class="">
