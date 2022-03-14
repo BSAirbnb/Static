@@ -14,7 +14,7 @@
 }
 .imgbox{
     width: 125px;
-    height: 95px;
+    /* height: 95px; */
 }
 #roomimg{
     object-fit: contain;
@@ -26,13 +26,13 @@ h3{
 }
 .landlord-picture{
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    overflow: hidden;
+    /* height: 50px; */
+    /* width: 50px; */
+    /* overflow: hidden; */
 }
 .landlord-picture img{
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 .landlord-message div{
     font-size: 14px;
