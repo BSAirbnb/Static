@@ -49,13 +49,13 @@
 
 
         }
-
+/* 
         @media screen and (max-width:767px) {
             .Options>.OptionsRow1 {
                 height: calc(100% + 300px);
 
             }
-        }
+        } */
 
         /* .Options{
             height: 100vh;
@@ -87,6 +87,12 @@
             height: 100px;
             border-top: 1px solid #aaa;
         }
+        .nextsteprow{
+            height: 100px;
+        }
+        .OptionsRow1{
+            height: calc(100vh - 100px);
+        }
     </style>
 </head>
 
@@ -99,28 +105,28 @@
             </div>
             <!-- 選項 -->
             <div class="col-md-6 Options">
-                <div class="row justify-content-center  pt-5 OptionsRow1 mb-3 align-content-center align-items-center ">
-                    <button class="col-8 OptionCards d-flex justify-content-between mt-md-3 btn bg-white ">
+                <div class="row justify-content-center  pt-5 OptionsRow1  align-content-center align-items-center ">
+                    <button class="col-8 OptionCards d-flex justify-content-between  btn bg-white ">
                         <span>公寓</span>
                         <img src="./add01_01_apart.jpg" alt="">
                     </button>
-                    <button class="col-8 OptionCards d-flex justify-content-between mt-md-3 btn bg-white ">
+                    <button class="col-8 OptionCards d-flex justify-content-between  btn bg-white ">
                         <span>獨棟房屋</span>
                         <img src="./add01_02.jpg" alt="">
                     </button>
 
                     </button>
-                    <button class="col-8 OptionCards d-flex justify-content-between mt-md-3 btn bg-white ">
+                    <button class="col-8 OptionCards d-flex justify-content-between  btn bg-white ">
                         <span>獨特房源</span>
                         <img src="./add01_04.jpg" alt="">
                     </button>
-                    <button class="col-8 OptionCards d-flex justify-content-between mt-md-3btn bg-white ">
+                    <button class="col-8 OptionCards d-flex justify-content-between btn bg-white ">
                         <span>家庭式旅館</span>
                         <img src="./add01_05.jpg" alt="">
                     </button>
 
                 </div>
-                <div class="row">
+                <div class="row nextsteprow">
                     <div class="col-12 nextstep  d-flex  p-4">
                         <a href="#" class="text-black">返回</a>
                         <button class="btn btn-dark ms-auto"><a href="#"
