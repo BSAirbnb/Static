@@ -12,6 +12,7 @@
 
     <title>document</title>
     <style>
+
         .Question {
             background-image: linear-gradient(#CC277D, #441CA2);
             height: 40vh;
@@ -30,7 +31,8 @@
         @media screen and (min-width:768px) {
             .Question {
                 background-image: linear-gradient(#CC277D, #441CA2);
-                height: 100vh;
+                height: calc(100vh + 100px);
+                min-height: 700px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -51,7 +53,6 @@
                 background-color: white;
                 border: 1px solid #aaa;
                 border-radius: 5px;
-                min-height: 60vh;
                 width: 40vw;
             }
 
@@ -102,7 +103,7 @@
         #map {
             /* 給地圖寬跟高 */
             width: 100%;
-            height: calc(100vh - 100px);
+            height: 600px;
             margin-bottom: 100px;
             /* 詳細設定且為手機時地圖不見 */
             /* display: none; */
@@ -126,7 +127,7 @@
             background-color: white;
             border: 1px solid #aaa;
             border-radius: 5px;
-            min-height: 60vh;
+            height: 500px;
             position: absolute;
             /* 到時候隱藏改zindex :0 */
             z-index: 2;
@@ -147,7 +148,8 @@
         }
 
         .OptionsRow3 {
-            height: calc(100vh - 100px);
+            height:100vh;
+            min-height: 602px!important;
         }
 
         /* 詳細地址框左上角的上一步 */

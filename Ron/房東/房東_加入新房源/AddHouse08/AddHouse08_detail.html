@@ -32,7 +32,8 @@
         @media screen and (min-width:768px) {
             .Question {
                 background-image: linear-gradient(#CC277D, #441CA2);
-                height: 100vh;
+                height: calc(100vh + 100px);
+                min-height: 700px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -102,7 +103,7 @@
         }
 
         .OptionsRow8 {
-            height: calc(100vh - 100px);
+            height: 100vh;
         }
     </style>
 </head>
@@ -112,7 +113,7 @@
         <div class="row">
             <!-- 問題 -->
             <div class="col-md-6 col-12  Question ">
-                <h3>來為房源取名吧</h3>
+                <h3>來為房源撰寫描述</h3>
             </div>
             <!-- 照片 -->
             <div class="col-md-6 col-12 Options   ">

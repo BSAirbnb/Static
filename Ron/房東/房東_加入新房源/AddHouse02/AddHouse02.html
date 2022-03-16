@@ -30,7 +30,8 @@
         @media screen and (min-width:768px) {
             .Question {
                 background-image: linear-gradient(#CC277D, #441CA2);
-                height: 100vh;
+                height: calc(100vh + 100px);
+                min-height: 700px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -46,16 +47,14 @@
             .nextstep {
                 width: 50vw;
             }
-
-
         }
 
-        /* @media screen and (max-width:767px) {
+        @media screen and (max-width:767px) {
             .Options>.OptionsRow2 {
-                height: calc(100% + 300px);
+                height:  500px;
 
             }
-        } */
+        }
 
         /* .Options{
         height: 100vh;
@@ -93,7 +92,7 @@
         }
 
         .OptionsRow2 {
-            height: calc(100vh - 100px);
+            height: 100vh ;
         }
     </style>
 </head>
