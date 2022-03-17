@@ -34,7 +34,8 @@
         @media screen and (min-width:768px) {
             .Question {
                 background-image: linear-gradient(#CC277D, #441CA2);
-                height: 100vh;
+                height: calc(100vh + 100px);
+                min-height: 700px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -104,6 +105,14 @@
             border-radius: 15px;
             border: 1px solid #B0B0B0;
         }
+
+        .nextsteprow {
+            height: 100px;
+        }
+
+        .OptionsRow9 {
+            height:100vh;
+        }
     </style>
 </head>
 
@@ -116,15 +125,15 @@
 
             </div>
 
-            <div class="col-md-6 col-12 Options pt-md-5 ">
-                <div class="row justify-content-center pt-5 OptionsRow9">
-                    <div class="col-10 col-md-12 my-auto text-center pt-md-5 pb-5 ">
+            <div class="col-md-6 col-12 Options  ">
+                <div class="row justify-content-center  OptionsRow9">
+                    <div class="col-10 col-md-12 mt-auto text-center  ">
                         <button class="btn me-3"><i class="fas fa-minus-circle"></i></button>
                         <input type="text" id="input_price" value="$500">
                         <button class="btn ms-3"><i class="fas fa-plus-circle"></i></button>
                     </div>
-                    <div class="col-12 col-md-12">
-                        <div class=" text-center fw-bolder fs-3 pb-5">每晚</div>
+                    <div class="col-12 col-md-12 mb-auto">
+                        <div class=" text-center fw-bolder fs-3 lh-lg ">每晚</div>
                         <div class=" fs-6 text-center">請留意，與你的房源類似的住宿，價格通常落在 $603 至 $1,005 之間。</div>
                     </div>
                 </div>

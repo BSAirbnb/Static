@@ -32,7 +32,8 @@
         @media screen and (min-width:768px) {
             .Question {
                 background-image: linear-gradient(#CC277D, #441CA2);
-                height: 100vh;
+                height: calc(100vh + 100px);
+                min-height: 700px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -97,6 +98,14 @@
             border-radius: 10px;
             resize: none;
         }
+
+        .nextsteprow {
+            height: 100px;
+        }
+
+        .OptionsRow7 {
+            height: 100vh
+        }
     </style>
 </head>
 
@@ -108,14 +117,14 @@
                 <h3>來為房源取名吧</h3>
             </div>
             <!-- 照片 -->
-            <div class="col-md-6 col-12 Options pt-md-5 ">
-                <div class="row justify-content-center pt-md-5 OptionsRow7  ">
-                    <div class="col-10 col-md-8 my-auto pt-md-5">
+            <div class="col-md-6 col-12 Options  ">
+                <div class="row justify-content-center  OptionsRow7  ">
+                    <div class="col-10 col-md-8 my-auto ">
                         <h3 class="fw-bolder mb-4">建立標題</h3>
                         <textarea class="w-100" name="" id="" cols="10" rows="5" maxlength="50" required></textarea>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row nextsteprow">
                     <div class="col-12 nextstep  d-flex  p-4">
                         <a href="#" class="text-black">返回</a>
                         <button class="btn btn-dark ms-auto"><a href="#"

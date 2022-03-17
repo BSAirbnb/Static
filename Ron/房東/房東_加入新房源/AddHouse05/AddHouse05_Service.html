@@ -35,7 +35,8 @@
         @media screen and (min-width:768px) {
             .Question {
                 background-image: linear-gradient(#CC277D, #441CA2);
-                height: 100vh;
+                height: calc(100vh + 100px);
+                min-height: 700px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -91,6 +92,14 @@
             height: 100px;
             border-top: 1px solid #aaa;
         }
+
+        .nextsteprow {
+            height: 100px;
+        }
+
+        .OptionsRow5 {
+            height: 100vh ;
+        }
     </style>
 </head>
 
@@ -130,7 +139,7 @@
                         <span>停車位</span>
                     </button>
                 </div>
-                <div class="row">
+                <div class="row nextsteprow">
                     <div class="col-12 nextstep  d-flex  p-4">
                         <a href="#" class="text-black">返回</a>
                         <button class="btn btn-dark ms-auto"><a href="#"
