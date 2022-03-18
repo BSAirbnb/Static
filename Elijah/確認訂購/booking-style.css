@@ -9,7 +9,7 @@
 .page-title{
     position: fixed;
     top: 83px;
-    z-index: 2;
+    z-index: 4;
     background-color: #fff;
 }
 .imgbox{

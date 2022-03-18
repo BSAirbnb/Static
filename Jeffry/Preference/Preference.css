@@ -19,7 +19,6 @@ a:hover{
 li{
     list-style: none;
 }
-
 footer ul {
     font-size: 12px;
 }
@@ -36,13 +35,32 @@ footer h4{
     transition: 0.3s ease;
 }
 
-.right-container{
-    box-sizing: border-box;
-    margin-left: 5%;
-    border: lightgray solid;
-    border-radius: 10px;
+section{
+    margin-top: 120px;
+    margin-bottom: 50px;
 }
 
+.right-container{
+    box-sizing: border-box;
+    height: 5%;
+    padding: 2%;
+    border: lightgray solid;
+    border-radius: 5px;
+}
+#hr-sm-display{
+    display: none;
+}
+@media screen and (max-width:767px) {
+    .right-container{
+        box-sizing: border-box;
+        height: 5%;
+        padding: 2%;
+        border: none;
+    }
+    #hr-sm-display{
+        display: block;
+    }
+}
 #dropdownMenu2{
     width: 20%;
 }
@@ -53,18 +71,26 @@ footer h4{
     border-radius: 5%;
 }
 
-.left-container{
-    box-sizing: border-box;
-    padding-left: 5%;
-}
-
-.item{
+.lower-content{
     display: flex;
     justify-content: space-between;
 }
 
+.form-check{
+    display: flex;
+    justify-content: space-between;
+}
 .edit-btn{
     font-size: 14px;
     font-weight: bold;
     text-decoration: underline;
+}
+.lower-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.function-share-to-facebook{
+    display: flex;
+    justify-content: space-between;
 }

@@ -26,9 +26,6 @@ footer h4{
     font-size: 16px;
     font-weight: bold;
 }
-#dropdownMenu2{
-    width: 20%;
-}
 .dropdown-menu.dropdown-menu-end{
     border-radius: 20px;
 }
@@ -37,50 +34,35 @@ footer h4{
     color: #faa;
     transition: 0.3s ease;
 }
-.update-photo{
-    text-align: center;
-}
+
 section{
-    margin-top: 150px;
-}
-.profile-picture-container{
-    border-radius: 50%;
-    height: 120px;
-    width: 120px;
-    overflow: hidden;
-}
-.profile-picture-container img{
-    width: 100%;
-    height: 100%;
-}
-.left-container{
-    box-sizing: border-box;
-    border: lightgray solid;
-    border-radius: 10px;
+    margin-top: 120px;
+    margin-bottom: 50px;
 }
 
+.right-container{
+    box-sizing: border-box;
+    height: 5%;
+    padding: 2%;
+    border: lightgray solid;
+    border-radius: 5px;
+}
 #hr-sm-display{
     display: none;
 }
-
 @media screen and (max-width:767px) {
-    .left-container{
+    .right-container{
         box-sizing: border-box;
-        /* height: 5%; */
-        /* padding: 2%; */
+        height: 5%;
+        padding: 2%;
         border: none;
     }
     #hr-sm-display{
         display: block;
     }
 }
-
-.profile{
-    margin-top: 8%;
-}
-.regist-date{
-    font-size: 14px;
-    color: #717171
+#dropdownMenu2{
+    width: 20%;
 }
 
 .property-photo img{
@@ -88,24 +70,38 @@ section{
     height: 55%;
     border-radius: 5%;
 }
-.right-container{
-    box-sizing: border-box;
-    padding-left: 5%;
-}
-.commenter-profile-container{
+
+.each-item{
     display: flex;
+    justify-content: space-between;
 }
-.commenter-picture{
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    overflow: hidden;
+
+.form-check{
+    display: flex;
+    justify-content: space-between;
 }
-.commenter-profile-container img{
-    width: 100%;
-    height: 100%;
-}
-.review-amount{
+.edit-btn{
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
     font-weight: bold;
-    font-size: 20px;
+    text-decoration: underline;
+    color: #008489;
+}
+
+.collapse{
+    width: 100%
+}
+
+.card-body .card{
+    padding: 0px;
+}
+
+.dropdown-container{
+    width: 555px;
+}
+
+.function-share-to-facebook{
+    display: flex;
+    justify-content: space-between;
 }
