@@ -7,12 +7,62 @@
     <link rel="stylesheet" href="./normalize.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="Personal_Details.css">
-    
+    <link rel="stylesheet" href="./index-style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <title>的個人資料 - Airbnb</title>
+    <title>Document</title>
+    <style>
+        .or{
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+        }
+        .or .line{
+            display: inline-block;
+            width: 200px;
+            border-top: 1px solid #ccc;
+        }
+        .or .text{
+            vertical-align: -8%;
+        }
+        .button5{
+            border-radius: 10px;
+            background-color: white;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid black;
+            height: 45px;
+            width: 400px;
+        }
+
+        .button5:hover{
+            background-color:rgb(245, 239, 239);
+        }
+
+        .modal2{
+            width: 600px;
+        }
+
+        .select1{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .select2{
+            width:400px;height:40px;
+            border-radius: 10px;;  
+            background-color: rgb(235, 17, 100);
+            color: aliceblue; 
+            border: 0ch;
+        }
+        .select2:hover{
+            background-color: rgb(212, 57, 117)
+        }
+    </style>
 </head>
+
+
 
 <body>
     <nav class="navbar navbar-light bg-white border-bottom container-fluid">
@@ -28,7 +78,8 @@
                     登入
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="#">註冊</a></li>
+                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">註冊</a>
+                    </li>
                     <li><a class="dropdown-item" href="#">登入</a></li>
                     <li><a class="dropdown-item" href="#">出租房源</a></li>
                 </ul>
@@ -36,106 +87,57 @@
         </div>
     </nav>
 
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 left-container">
-                    <div class="d-flex justify-content-center profile">
-                        <div class="profile-picture-container">
-                            <img src="./user_pic-225x225.png" class="rounded-circle profile-picture">
-                        </div>
-                    </div>
-                    <div class="update-photo">
-                        <a href="">更新相片</a>
-                    </div>
-                    <div class="review my-4">
-                        <i class="bi bi-star"></i>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-star" viewBox="0 0 16 16">
-                            <path
-                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
-                        </svg>
-                        1則評價
-                    </div>
-                    <hr id="hr-sm-display">
-                    <div class="security-badge">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="identiy-check">
-                        <h4>身分驗證</h4>
-                        <p>透過身分驗證徽章展示你真的是本人。</p>
-                    </div>
-                    <div class="d-grid gap-2 d-md-block get-badge">
-                        <button class="btn btn-outline-dark my-2" type="button">取得徽章</button>
-                    </div>
-                    <hr>
-                    <div class="confirm-already">
-                        <h4 class="my-4">Yu Cheng 已確認</h4>
-                        <div class="checklist my-2">
-                            <i class="fas fa-check"></i>
-                            電子郵件地址
-                        </div>
-                        <div class="checklist my-2">
-                            <i class="fas fa-check"></i>
-                            電話號碼
-                        </div>
-                        <div class="checklist my-2">
-                            <i class="fas fa-check"></i>
-                            工作用電子郵件
-                        </div>
+    <div class="modal" id="loginModal" tabindex="-1" >
+        <div class="modal-dialog">
+            <div class="modal-content d-flex modal2">
+                <div class="modal-header font-weight:bold">
+                    <h5 class="modal-title fs-3">登入或註冊</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="fs-2 font-weight:bold">Airbnb歡迎你</p>
+                </div>
+                <div class="select1">
+                    <select class="form-select form-select-lg mb-3 w-75" aria-label=".form-select-lg example">
+                        <option selected>臺灣(+866)</option>
+                        <option value="1">美國</option>
+                        <option value="2">中國</option>
+                        <option value="3">日本</option>
+                    </select>
+                    <div class="input-group flex-nowrap w-75">
+                        <input type="text" class="form-control" placeholder="電話號碼" aria-label="Username" aria-describedby="addon-wrapping">
                     </div>
                 </div>
-                <!-- <hr id="hr-sm-display"> -->
-                <div class="col-12 col-md-7 my-5 right-container">
-                    <div class="title">
-                        <h2>嗨！我是Yu Cheng</h2>
-                    </div>
-                    <div class="regist-date">加入時間：2015</div>
-                    <div class="edit-personal-data my-1">
-                        <a href="#">編輯個人資料</a>
-                    </div>
-                    <div class="about-me my-4">
-                        <h5>關於我</h5>
-                    </div>
-                    <div class="say-something my-2">Hello, I'm Yu Cheng</div>
-                    <div class="residency my-2"><i class="fas fa-home"></i> 住在台北, 臺灣</div>
-                    <div class="language my-3"><i class="fas fa-comment-alt"></i> 使用語言：English、 中文、 日本語</div>
-                    <hr>
-                    <div class="user-property my-3">
-                        <h4>Yu Cheng的房源</h4>
-                    </div>
-                    <div class="property-photo my-2">
-                        <img src="./room.jpg" class="my-2">
-                    </div>
-                    <hr>
-                    <div class="review-container">
-                        <i class="fas fa-star"></i>
-                        <span class="review-amount">1則評價</span>
-                        <div class="comment-date">七月 2016</div>
-                        <div class="comment my-2">
-                            Yu was a nice guest. He informed me of any problems he has during his stay. Coomunication
-                            was really clear. My apartment was clean when he left
-                        </div>
-                        <div class="commenter-profile-container my-5">
-                            <div class="commenter-picture">
-                                <img src="./user_pic-225x225.png">
-                            </div>
-                            <div class="commenter mx-2">
-                                <div class="user">Adi</div>
-                                <div class="regist-date">加入時間：2015</div>
-                            </div>
-                        </div>
-                        <hr>
-                        <a href="" class="my-5">你寫的評價</a>
-                        <hr>
-                    </div>
+                <p class="mt-2 p-3">我們會打電話或傳簡訊，以確認你的電話號碼。可能會產生一般簡訊和數據傳輸費用。
+                <u class="" style="font-weight:bold">私隱政策</u></p>
+                
+                <div class="d-flex justify-content-center align-items-center">
+                    <input class="select2" type="button" value="繼續">
+                </div>
+
+                <div class="or">
+                    <span class="line"></span>
+                    <span class="text">或</span>
+                    <span class="line"></span>
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-center align-items-center mt-2">
+                    <button class="button5"><i class="fab fa-facebook-square fs-3 mx-2"></i>繼續使用Facebook登入</button>
+                    <button class="button5 mt-2"><i class="fab fa-google fs-3 mx-2"></i>繼續使用Google登入</button>
+                    <button class="button5 mt-2"><i class="fab fa-apple fs-3 mx-2"></i>使用Apple帳號登入</button>
+                    <button class="button5 mt-2"><i class="fas fa-envelope fs-3 mx-2"></i>繼續使用電子郵件帳號登入</button>
+                </div>
+
+
+                <div class="modal-footer">
+            
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <footer class="bg-light">
-        <div class="container">
+    <footer class="bg-light w-100">
+        <div class="container-fluid my-3">
             <div class="row justify-content-space-between">
                 <div class="col-12 col-md-3 border-bottom">
                     <ul>

@@ -24,28 +24,9 @@
                 <img src="./creatures of corner.png" alt="Creatures of Corner" class="logo">
             </a>
 
-            <form class="d-flex justify-content-center">
-                <div class="mx-2 d-flex search-info">
-                    <div class="border-end h-100 col-3">
-                        <span class="mt-1 my-auto d-block text-center fs-5">位置</span>
-                        <span class="mt-1 my-auto d-block text-center fs-6">想要去的地方</span>
-                    </div>
-                    <div class="border-end h-100 col-3">
-                        <span class="mt-1 my-auto d-block text-center fs-5">入住</span>
-                        <span class="mt-1 my-auto d-block text-center fs-6">日期</span>
-                    </div>
-                    <div class="border-end h-100 col-3">
-                        <span class="mt-1 my-auto d-block text-center fs-5">退房</span>
-                        <span class="mt-1 my-auto d-block text-center fs-6">日期</span>
-                    </div>
-                    <div class="h-100 col-3">
-                        <span class="mt-1 my-auto d-block text-center fs-5">人數</span>
-                        <span class="mt-1 my-auto d-block text-center fs-6">幾位</span>
-                    </div>
-                </div>
-
-                <button class="btn btn-outline-success rounded-pill align-self-center" type="submit">Search</button>
-            </form>
+            <button type="button" class="btn btn-outline-primary rounded-pill search-bar" data-bs-toggle="modal" data-bs-target="#navbarSearchModal">
+                你想去哪裡?
+            </button>
 
 
             <div class="btn-group">
@@ -134,7 +115,7 @@
                 <!-- card -->
                 <div class="card mb-3 mx-3">
                     <div class="row g-0">
-                        <div class="col-md-4">
+                        <div class="col-md-4 cardImgBox">
                             <div id="carouselIndicators-1" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-indicators">
                                     <button type="button" data-bs-target="#carouselIndicators-1" data-bs-slide-to="0"
@@ -147,15 +128,15 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img src="https://picsum.photos/300/200/?random=10"
-                                            class="d-block rounded" alt="...">
+                                            class="d-block w-100 rounded" alt="...">
                                     </div>
                                     <div class="carousel-item">
                                         <img src="https://picsum.photos/300/200/?random=20"
-                                            class="d-block rounded" alt="...">
+                                            class="d-block w-100 rounded" alt="...">
                                     </div>
                                     <div class="carousel-item">
                                         <img src="https://picsum.photos/300/200/?random=30"
-                                            class="d-block rounded" alt="...">
+                                            class="d-block w-100 rounded" alt="...">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button"
@@ -199,18 +180,18 @@
                 <div class="card mb-3 mx-3">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <div id="carouselIndicators-1" class="carousel slide" data-bs-ride="carousel">
+                            <div id="carouselIndicators-2" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselIndicators-1" data-bs-slide-to="0"
+                                    <button type="button" data-bs-target="#carouselIndicators-2" data-bs-slide-to="0"
                                         class="active" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselIndicators-1" data-bs-slide-to="1"
+                                    <button type="button" data-bs-target="#carouselIndicators-2" data-bs-slide-to="1"
                                         aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselIndicators-1" data-bs-slide-to="2"
+                                    <button type="button" data-bs-target="#carouselIndicators-2" data-bs-slide-to="2"
                                         aria-label="Slide 3"></button>
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="https://picsum.photos/300/200/?random=11"
+                                        <img src="https://picsum.photos/700/500/?random=11"
                                             class="d-block w-100 rounded" alt="...">
                                     </div>
                                     <div class="carousel-item">
@@ -612,11 +593,15 @@
             <!-- 地圖 -->
             <div class="col-12 col-md-5 map-container d-md-block d-none">
                 <div class="map">
-                    <img class="mapimg" src="https://picsum.photos/400/400/?random=10">
+                    <img class="mapimg w-100" src="./googlemap.png">
+                    <!-- <img class="mapimg w-100" src="https://picsum.photos/400/400/?random=10"> -->
                 </div>
             </div>
         </div>
     </div>
+    <button type="button" id="btn-switch-map-list" class="btn btn-primary rounded-pill d-md-none">
+        地圖
+    </button>
     <!-- 價格Modal -->
     <div class="modal fade" id="priceModal" tabindex="-1" aria-labelledby="priceModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -697,9 +682,9 @@
                 <div class="modal-body">
                     <div class="container-fluid filter-option border-bottom">
                         <p class="fs-5 fw-bold">臥室和床鋪</p>
-                        <div class="row">
-                            <div class="col-md-8">床位</div>
-                            <div class="col-md-4 d-flex justify-content-end">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>床位</div>
+                            <div class="d-flex justify-content-end">
                                 <button type="button" class="btn"><i class="fas fa-minus-circle fs-4"></i>
                                 </button>
                                 <span class="my-auto" id="bed">0</span>
@@ -707,9 +692,9 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-8">臥室</div>
-                            <div class="col-md-4 d-flex justify-content-end">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>臥室</div>
+                            <div class="d-flex justify-content-end">
                                 <button type="button" class="btn"><i class="fas fa-minus-circle fs-4"></i>
                                 </button>
                                 <span class="my-auto" id="bedroom">0</span>
@@ -717,9 +702,9 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="row mb-4">
-                            <div class="col-md-8">衛浴</div>
-                            <div class="col-md-4 d-flex justify-content-end">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div>衛浴</div>
+                            <div class="d-flex justify-content-end">
                                 <button type="button" class="btn"><i class="fas fa-minus-circle fs-4"></i>
                                 </button>
                                 <span class="my-auto" id="bathroom">0</span>
@@ -897,7 +882,55 @@
             </div>
         </div>
     </div>
+    <!-- nav bar search Modal -->
+    <div class="modal fade" id="navbarSearchModal" tabindex="-1" aria-labelledby="navbarSearchModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="navbarSearchModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="d-flex justify-content-center">
+                        <div class="mx-2 d-flex flex-column">
+                            
+                            <section class="container">
+                                <form class="row flex-column">
+                                    <div><input placeholder="位置" class="form-control"></div>
+                                    <label for="date" class="col-2 col-form-label">日期</label>
+                                    <div class="col-10">
+                                        <div class="input-group date" id="datepicker-start">
+                                            <input type="text" class="form-control" id="date"/>
+                                            <span class="input-group-append">
+                                                <span class="input-group-text bg-light d-block">
+                                                <i class="fa fa-calendar"></i>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="my-3">至</span>
+                                    <div class="col-10">
+                                        <div class="input-group date" id="datepicker-end">
+                                            <input type="text" class="form-control" id="date"/>
+                                            <span class="input-group-append">
+                                                <span class="input-group-text bg-light d-block">
+                                                <i class="fa fa-calendar"></i>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div><input type="number" placeholder="人數" class="form-control mt-3"></div>
+                                    <button class="btn btn-outline-success rounded-pill my-3" type="submit">搜尋</button>
+                                </form>
+                            </section>
 
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="bg-light w-100 d-md-block d-none">
         <div class="container my-3">
@@ -971,12 +1004,15 @@
         </div>
     </footer>
 
-
-
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="./search.js"></script>
+    
 </body>
 
 </html>

@@ -12,77 +12,104 @@
 
     <title>document</title>
     <style>
+
         .Question {
-        background-image: linear-gradient(#CC277D, #441CA2);
-        height: 40vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+            background-image: linear-gradient(#CC277D, #441CA2);
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .Question>h3 {
-        text-align: center;
-        line-height: 3em;
-        font-size: 24px;
-        color: white;
+            text-align: center;
+            line-height: 3em;
+            font-size: 24px;
+            color: white;
         }
 
         @media screen and (min-width:768px) {
-        .Question {
-        background-image: linear-gradient(#CC277D, #441CA2);
+            .Question {
+                background-image: linear-gradient(#CC277D, #441CA2);
+                height: calc(100vh + 100px);
+                min-height: 700px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Question>h3 {
+                text-align: center;
+                line-height: 3em;
+                font-size: 48px;
+                color: white;
+            }
+
+            .nextstep {
+                width: 50vw;
+            }
+
+            #detail_address {
+                background-color: white;
+                border: 1px solid #aaa;
+                border-radius: 5px;
+                width: 40vw;
+            }
+
+        }
+
+        @media screen and (max-width:767px) {
+            .Options>.OptionsRow3 {
+                height: calc(100vh + 200px);
+
+            }
+
+            #detail_address {
+                width: 80vw;
+            }
+        }
+
+        /* .Options{
         height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-
-        .Question>h3 {
-        text-align: center;
-        line-height: 3em;
-        font-size: 48px;
-        color: white;
-        }
-        }
-
-        .Options>.row {
-        height:100vh;
-
-        }
+        } */
 
         /* 選項 */
         .OptionCards {
-        max-height: 100px;
-        border:1px solid #B0B0B0;
-        border-radius: 5px;
-        padding: 20px;
+            max-height: 100px;
+            margin: 10px;
+            border: 1px solid #B0B0B0;
+            border-radius: 5px;
+            padding: 20px;
+
 
         }
 
         .OptionCards>span {
-        margin: auto 0;
-        font-weight: 600;
+            margin: auto 0;
+            font-weight: 600;
         }
 
         .nextstep {
-        margin-top: auto;
-        /* max-height: 100px; */
-        border-top: 1px solid #aaa;
+            /* margin-top: auto; */
+            /* max-height: 100px; */
+            background-color: white;
+            z-index: 2;
+            position: fixed;
+            bottom: 0px;
+            height: 100px;
+            border-top: 1px solid #aaa;
         }
 
         #map {
             /* 給地圖寬跟高 */
             width: 100%;
-            min-height: 70vh;
+            height: 600px;
+            margin-bottom: 100px;
             /* 詳細設定且為手機時地圖不見 */
             /* display: none; */
         }
 
-        #detail_address {
-            background-color: white;
-            border: 1px solid #aaa;
-            border-radius: 5px;
-            min-height: 60vh;
-        }
+
 
         /* 第一步地址搜尋列 */
         #first_address {
@@ -97,6 +124,10 @@
 
         /* 詳細地址框 */
         #detail_address {
+            background-color: white;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            height: 500px;
             position: absolute;
             /* 到時候隱藏改zindex :0 */
             z-index: 2;
@@ -104,11 +135,21 @@
             padding: 20px;
             /* display: none; */
         }
+
         /* 手機時詳細就不用浮在地圖上 */
         @media screen and (max-width: 768px) {
             #detail_address {
                 position: static;
             }
+        }
+
+        .nextsteprow {
+            height: 100px;
+        }
+
+        .OptionsRow3 {
+            height:100vh;
+            min-height: 602px!important;
         }
 
         /* 詳細地址框左上角的上一步 */
@@ -124,7 +165,7 @@
             </div>
             <!-- 地圖-->
             <div class="col-md-6 col-12 Options position-relative ">
-                <div class="row justify-content-center  ">
+                <div class="row justify-content-center OptionsRow3 ">
                     <!-- 搜尋列(暫時 之後要用google的) -->
                     <div class="col-12 col-md-8" id="first_address">
                         <div class="input-group mb-3  ">
@@ -134,28 +175,28 @@
                         </div>
                     </div>
                     <!-- 詳細確認地址modal 找到地址後才要顯示-->
-                    <div class="col-12 col-md-8  " id="detail_address">
-                        <form>
+                    <div class="col-12 col-md-8 d-flex align-content-between " id="detail_address">
+                        <form class="w-100">
                             <button id="btn_BackToFirstAddress" class="btn btn-light bg-white fs-3 fw-bolder border-0">
                                 <<</button> <h2 class="text-center fs-5 fw-bolder">確認您的地址</h2>
-                                    <div class="mb-3">
+                                    <div class="">
                                         <label for="exampleInputEmail1" class="form-label"
                                             id="input_street">街道地址</label>
                                         <input type="email" class="form-control" id="exampleInputEmail1"
                                             aria-describedby="emailHelp">
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="">
                                         <label for="exampleInputEmail1" class="form-label"
                                             id="input_area">區域(鄉鎮市區)</label>
                                         <input type="email" class="form-control" id="exampleInputEmail1"
                                             aria-describedby="emailHelp">
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="">
                                         <label for="exampleInputEmail1" class="form-label" id="input_street">城市</label>
                                         <input type="email" class="form-control" id="exampleInputEmail1"
                                             aria-describedby="emailHelp">
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="">
                                         <label for="exampleInputEmail1" class="form-label" id="input_street">國家</label>
                                         <input type="email" class="form-control" id="exampleInputEmail1"
                                             aria-describedby="emailHelp">
@@ -170,8 +211,9 @@
                         <div id="map" class=""></div>
 
                     </div>
-
-                    <div class="col-12 nextstep  d-flex  py-4 ">
+                </div>
+                <div class="row nextsteprow">
+                    <div class="col-12 nextstep  d-flex  p-4">
                         <a href="#" class="text-black">返回</a>
                         <button class="btn btn-dark ms-auto"><a href="#"
                                 class="text-decoration-none text-white">下一步</a></button>

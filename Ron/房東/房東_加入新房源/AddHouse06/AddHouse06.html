@@ -15,7 +15,7 @@
     <title>document</title>
     <style>
         /* .container-fluid{
-            height: 100%;
+        height: 100%;
         } */
         .Question {
             background-image: linear-gradient(#CC277D, #441CA2);
@@ -35,7 +35,8 @@
         @media screen and (min-width:768px) {
             .Question {
                 background-image: linear-gradient(#CC277D, #441CA2);
-                height: 100vh;
+                height: calc(100vh + 100px);
+                min-height: 700px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -47,36 +48,63 @@
                 font-size: 48px;
                 color: white;
             }
+
+            .nextstep {
+                width: 50vw;
+            }
         }
 
-        .Options>.row {
-            height: 100vh;
+        @media screen and (max-width:767px) {
+            .Options>.OptionsRow6 {
+                height: calc(100% + 300px);
 
+            }
         }
 
         /* 選項 */
-        .OptionCards {
-            max-height: 100px;
-            border: 2px solid #aaa;
-            border-radius: 5px;
+        .OptionsRow6>.OptionCards {
+            height: 150px;
+            border: 2px solid #DDDDDD;
+            border-radius: 10px;
             padding: 20px;
+
+        }
+
+        .OptionCards>i {
+            margin: auto 1rem auto 0;
+            font-size: 36px;
 
         }
 
         .OptionCards>span {
             margin: auto 0;
             font-weight: 600;
+            font-size: 24px;
         }
 
         .nextstep {
-            margin-top: auto;
+            /* margin-top: auto; */
             /* max-height: 100px; */
+            background-color: white;
+            z-index: 2;
+            position: fixed;
+            bottom: 0px;
+            height: 100px;
             border-top: 1px solid #aaa;
         }
-        #pic_upload_0{
+
+        #pic_upload_0 {
             height: 60vh;
             border: 2px dashed #dddddd;
-            
+
+        }
+
+        .nextsteprow {
+            height: 100px;
+        }
+
+        .OptionsRow6 {
+            height: 100vh;
         }
     </style>
 </head>
@@ -89,21 +117,20 @@
                 <h3>接下來，請為房源新增幾張相片</h3>
             </div>
             <!-- 照片 -->
-            <div class="col-md-6 col-12 Options  ">
-                <div class="row justify-content-center pt-5 ">
-                    <div class="col-10 col-md-6  mt-5 d-flex flex-wrap justify-content-center text-center " id="pic_upload_0">
-                        
+            <div class="col-md-6 col-12 Options   ">
+                <div class="row justify-content-center OptionsRow6 ">
+                    <div class="col-10 col-md-6  my-auto d-flex flex-wrap justify-content-center text-center "
+                        id="pic_upload_0">
+
                         <div class="w-100 text-center my-auto ">
                             <i class="fas fa-images fs-3"></i>
                             <h2 class="fs-3 fw-bolder">請上傳照片</h2>
                             <button class="bg-white border-0 text-decoration-underline mt-5 fw-bolder">從你的裝置上傳</button>
                         </div>
-                        
-                        
-                        
-                        
                     </div>
-                    <div class="col-12 nextstep  d-flex  py-4">
+                </div>
+                <div class="row nextsteprow">
+                    <div class="col-12 nextstep  d-flex  p-4">
                         <a href="#" class="text-black">返回</a>
                         <button class="btn btn-dark ms-auto"><a href="#"
                                 class="text-decoration-none text-white">下一步</a></button>

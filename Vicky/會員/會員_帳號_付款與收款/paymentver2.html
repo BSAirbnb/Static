@@ -23,16 +23,8 @@
         /* 選項切換列 */
         .options{
             padding-bottom: 15px;
-            border-bottom: 1px solid rgb(220,220,220);
+            /* border-bottom: 1px solid rgb(220,220,220); */
         }
-        /* .options::after{
-            content: '';
-            flex-grow: 1;
-            width: 100px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgb(220,220,220);
-            margin-left: .7em;
-        } */
         .options .pay{
             padding-bottom: 15px;
             border-bottom: 2px solid rgb(66, 142, 144);
@@ -109,11 +101,13 @@
             <!-- 選項切換列 -->
             <div class="row options mx-4 mt-5">
                 <div class="col-10">
-                    <a href="#" class="pay me-2">付款</a>
-                    <a href="#" class="fw-bold mx-2">收款</a>
-                    <a href="#" class="fw-bold mx-2">稅款</a>
-                    <a href="#" class="fw-bold mx-2">捐款</a>
-                    <a href="#" class="fw-bold mx-2">旅客贈款</a>
+                    <ul class="nav nav-tabs">
+                        <a href="#" class="pay me-2">付款</a>
+                        <a href="#" class="fw-bold mx-2">收款</a>
+                        <a href="#" class="fw-bold mx-2">稅款</a>
+                        <a href="#" class="fw-bold mx-2">捐款</a>
+                        <a href="#" class="fw-bold mx-2">旅客贈款</a>
+                    </ul>
                 </div>
             </div>
             <!-- 付款區塊 -->

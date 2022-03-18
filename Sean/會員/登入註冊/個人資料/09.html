@@ -7,11 +7,65 @@
     <link rel="stylesheet" href="./normalize.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="Personal_Details.css">
-    
+    <link rel="stylesheet" href="/Sean/index-style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <title>的個人資料 - Airbnb</title>
+    <title>Document</title>
+    <style>
+        .section1 {
+            margin-top: 100px;
+            padding-left: 150px;
+        }
+
+        .rounded {
+            border-radius: 1.50rem !important;
+        }
+
+        .textbox2 {
+            margin-left: 40px;
+            font-size: 20px;
+        }
+
+        .button5 {
+            border-radius: 10px;
+            background-color: white;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid black;
+            height: 45px;
+            width: 100%;
+        }
+
+        .button5:hover {
+            background-color: rgb(245, 239, 239);
+        }
+
+        .section2 {
+            font-size: 20px;
+        }
+
+        footer {
+            margin-top: 150px;
+        }
+
+        .middleline {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: black;
+        }
+
+        .centerll :hover{
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,7 +73,7 @@
         <div class="container flex-nowrap">
             <!-- 以下 logo 的連結記得要換 -->
             <a href="./index.html" class="navbar-brand col-1">
-                <img src="./creatures of corner.png" alt="Creatures of Corner" class="logo">
+                <img src="/Sean/creatures of corner.png" alt="Creatures of Corner" class="logo">
             </a>
 
             <div class="btn-group">
@@ -28,7 +82,8 @@
                     登入
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="#">註冊</a></li>
+                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">註冊</a>
+                    </li>
                     <li><a class="dropdown-item" href="#">登入</a></li>
                     <li><a class="dropdown-item" href="#">出租房源</a></li>
                 </ul>
@@ -36,106 +91,82 @@
         </div>
     </nav>
 
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 left-container">
-                    <div class="d-flex justify-content-center profile">
-                        <div class="profile-picture-container">
-                            <img src="./user_pic-225x225.png" class="rounded-circle profile-picture">
-                        </div>
-                    </div>
-                    <div class="update-photo">
-                        <a href="">更新相片</a>
-                    </div>
-                    <div class="review my-4">
-                        <i class="bi bi-star"></i>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-star" viewBox="0 0 16 16">
-                            <path
-                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
-                        </svg>
-                        1則評價
-                    </div>
-                    <hr id="hr-sm-display">
-                    <div class="security-badge">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="identiy-check">
-                        <h4>身分驗證</h4>
-                        <p>透過身分驗證徽章展示你真的是本人。</p>
-                    </div>
-                    <div class="d-grid gap-2 d-md-block get-badge">
-                        <button class="btn btn-outline-dark my-2" type="button">取得徽章</button>
-                    </div>
-                    <hr>
-                    <div class="confirm-already">
-                        <h4 class="my-4">Yu Cheng 已確認</h4>
-                        <div class="checklist my-2">
-                            <i class="fas fa-check"></i>
-                            電子郵件地址
-                        </div>
-                        <div class="checklist my-2">
-                            <i class="fas fa-check"></i>
-                            電話號碼
-                        </div>
-                        <div class="checklist my-2">
-                            <i class="fas fa-check"></i>
-                            工作用電子郵件
-                        </div>
+    <section class="section1">
+        <h2 class="fw-bold">邀請計畫</h2>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-md-3">
+
+            </div>
+            <div class="col-12 col-md-6 mt-5">
+                <div class="shadow p-3 mb-5 bg-white rounded h-100 d-flex flex-column justify-content-between">
+                    <div class="textbox2 mt-5">
+                        <h3 class="fw-bold">查看受邀好友註冊狀態</h3>
+                        <p class="mt-3">已完成註冊的受邀好友</p>
+                        <p class="">註冊</p>
+                        <button class="button5 mt-2">顯示更多詳情</button>
                     </div>
                 </div>
-                <!-- <hr id="hr-sm-display"> -->
-                <div class="col-12 col-md-7 my-5 right-container">
-                    <div class="title">
-                        <h2>嗨！我是Yu Cheng</h2>
-                    </div>
-                    <div class="regist-date">加入時間：2015</div>
-                    <div class="edit-personal-data my-1">
-                        <a href="#">編輯個人資料</a>
-                    </div>
-                    <div class="about-me my-4">
-                        <h5>關於我</h5>
-                    </div>
-                    <div class="say-something my-2">Hello, I'm Yu Cheng</div>
-                    <div class="residency my-2"><i class="fas fa-home"></i> 住在台北, 臺灣</div>
-                    <div class="language my-3"><i class="fas fa-comment-alt"></i> 使用語言：English、 中文、 日本語</div>
-                    <hr>
-                    <div class="user-property my-3">
-                        <h4>Yu Cheng的房源</h4>
-                    </div>
-                    <div class="property-photo my-2">
-                        <img src="./room.jpg" class="my-2">
-                    </div>
-                    <hr>
-                    <div class="review-container">
-                        <i class="fas fa-star"></i>
-                        <span class="review-amount">1則評價</span>
-                        <div class="comment-date">七月 2016</div>
-                        <div class="comment my-2">
-                            Yu was a nice guest. He informed me of any problems he has during his stay. Coomunication
-                            was really clear. My apartment was clean when he left
-                        </div>
-                        <div class="commenter-profile-container my-5">
-                            <div class="commenter-picture">
-                                <img src="./user_pic-225x225.png">
-                            </div>
-                            <div class="commenter mx-2">
-                                <div class="user">Adi</div>
-                                <div class="regist-date">加入時間：2015</div>
+            </div>
+            <div class="col-12 col-md-3">
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="container mt-5 section2">
+        <hr class="middleline" style="border : 1px solid  grey;" class="mt-2" />
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h2 class="fw-bold">常見問題</h2>
+                <p>歡迎前往<a href="" class="fw-bold centerll">說明中心</a>查看常見問答，並瀏覽該計畫的其他詳情。</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed fs-5 fw-bold" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                現在還有好友邀請計畫嗎？
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                好友邀請計畫目前已取消，無法再傳送新的邀請。
+                                <br>
+                                如果你在計畫取消前有獲得優惠券，可於期限前用於任何一種預訂。
+                                <br>
+                                邀請人的旅行基金在效期前仍可繼續使用。如果之前邀請的好友在效期前使用優惠券，你就能在對方退房後獲得旅行基金（實際金額以當時的優惠為準）。
                             </div>
                         </div>
-                        <hr>
-                        <a href="" class="my-5">你寫的評價</a>
-                        <hr>
                     </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed fs-5 fw-bold" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                我有邀請好友，但沒收到旅行基金
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">凡是 2020 年 10 月 1 日後送出的好友邀請，Airbnb 將不再提供旅行基金。</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-light">
-        <div class="container">
+    <footer class="bg-light w-100">
+        <div class="container my-3">
             <div class="row justify-content-space-between">
                 <div class="col-12 col-md-3 border-bottom">
                     <ul>

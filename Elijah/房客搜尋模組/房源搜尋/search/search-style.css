@@ -6,7 +6,7 @@
 }
 .room-list-map{
     margin-top: 130px;
-    height: 80%;
+    /* height: 80%; */
 }
 .map{
     position:sticky;
@@ -15,8 +15,23 @@
 .mapimg{
     height: 80vh;
 }
-.card{
-    height: 11%;
+/* .card{
+    min-height: 11%;
+} */
+/* .cardImgBox{
+    width: 300px;
+    height: 200px;
+} */
+.card-body{
+    padding: 0;
+    margin: 0 15px;
+}
+#btn-switch-map-list{
+    width: 100px;
+    position: fixed;
+    bottom: 50px;
+    left: 40%;
+    z-index: 4;
 }
 .btn-check:focus+.btn, .btn:focus{
     outline: 0;

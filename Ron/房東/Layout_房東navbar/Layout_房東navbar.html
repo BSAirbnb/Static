@@ -19,25 +19,42 @@
         .logo {
             max-width: 50px;
         }
-        #navbar_host_layout{
+
+        #navbar_host_layout {
             min-height: 100px;
+            border-bottom: 1px solid #E4E4E4;
         }
-        .img-ctrl{
+
+        .img-ctrl {
             max-width: 50px;
             max-height: 50px;
-            border: 1px solid black;
+            border: 1px double #E4E4E4;
             border-radius: 50%;
             padding: 5px;
         }
-        #navbarScrollingDropdown2::after{
+
+        #navbarScrollingDropdown2::after {
             content: none;
         }
+        /* 調整usericon的位置及下拉彈出要在視窗內部喔 喔喔喔喔喔*/
+        @media screen and (min-width:768px) {
+            #user_icon {
+                margin-left: calc(35vw - 50px);
+            }
+            .dropdown-menu[data-bs-popper] {
+            
+            left: -7rem;
+            
+            }
+        }
+
+        
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white" id="navbar_host_layout">
+        <nav class="navbar navbar-expand-md navbar-light bg-white" id="navbar_host_layout">
             <div class="container-fluid ">
                 <a href="./index.html" class="navbar-brand col-1">
                     <img src="./creatures of corner.png" alt="Creatures of Corner" class="logo">
@@ -48,7 +65,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarScroll">
-                    <ul class="navbar-nav ms-md-auto me-md-auto  my-2 my-lg-0 fs-5 fw-bolder" style="--bs-scroll-height: 100px;">
+                    <ul class="navbar-nav ms-md-auto   my-2 my-lg-0 fs-6 fw-bolder" style="--bs-scroll-height: 100px;">
                         <!-- 當選到的時候要在下面的li的class + active -->
                         <li class="nav-item my-auto">
                             <a class="nav-link" aria-current="page" href="#">今天</a>
@@ -82,10 +99,10 @@
                                 <li><a class="dropdown-item" href="#">前往我們的社區論壇</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown text-end ms-md-4 ">
+                        <li class="nav-item dropdown text-end  " id="user_icon">
                             <a class="nav-link dropdown-toggle " href="#" id="navbarScrollingDropdown2" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                
+
                                 <div class="img-ctrl">
                                     <!-- 放使用者頭像 -->
                                     <img src="./creatures of corner.png" alt="" class="img-fluid">
@@ -114,7 +131,6 @@
                     </ul>
                 </div>
             </div>
-        </nav>
         </nav>
     </div>
 
