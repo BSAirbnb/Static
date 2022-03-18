@@ -9,8 +9,9 @@
 #reserve-btn{
     width: 100px;
     position: fixed;
-    bottom: 150px;
+    bottom: 80px;
     right: 100px;
+    z-index: 2;
 }
 
 #review-bar{
@@ -25,4 +26,21 @@
     height: 2px;
     background: #000;
     align-self: center;
+}
+
+input[type="date"]{
+    position: relative;
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+
 }
