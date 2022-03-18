@@ -18,6 +18,7 @@
   padding-left: 7px;
 }
 
+/* 篩選條件及匯出按鈕樣式 */
 .btn_filter,
 .btn_export {
   color: #484848;
@@ -27,6 +28,42 @@
   padding: 0.5rem 1rem;
 }
 
+/* 篩選條件點下去的div */
+.dropdown_menu_filter {
+  width: 350px;
+  padding: 20px;
+}
+
+/* 篩選條件p */
+.dropdown_menu_filter p {
+  font-weight: bold;
+  color: #484848;
+}
+
+/* 篩選條件span */
+.dropdown_menu_filter span {
+  font-size: 14px;
+}
+
+/* 篩選條件 - 套用btn */
+.button_filter_submit {
+  display: block;
+  color: #fff;
+  background-color: #008489;
+  margin-left: auto;
+}
+
+.button_filter_submit:hover {
+  color: #fff;
+}
+
+/* 篩選及匯出按鈕的right-radius */
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+/* 列印按鈕樣式 */
 .btn_print {
   color: #008489;
   border: 1px solid #008489;
@@ -35,8 +72,16 @@
   padding: 0.5rem 1rem;
 }
 
+/* 列印按鈕滑過去時 */
 .btn_print:hover {
   color: #008489;
+}
+
+/* 篩選及匯出按鈕按下去時 */
+.btn_filter:focus,
+.btn_export:focus {
+  color: #008489;
+  border: 1px solid #008489;
 }
 
 .tabs_container {

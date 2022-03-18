@@ -9,8 +9,9 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <title>Document</title>
-    <link rel="stylesheet" href="Edit_Personal_Data.css">
+    <title>隱私與分享
+    </title>
+    <link rel="stylesheet" href="Privacy-and-Share.css">
 </head>
 
 <body>
@@ -36,124 +37,109 @@
     </nav>
 
     <section>
-        <div class="container-fluid m-3">
+        <div class="container">
             <div class="row">
-                <div class="col-md-12 top-title">
-                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">帳號</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">個人資料</li>
-                        </ol>
-                    </nav>
+                <div class="topper-content ps-5 col-md-12">
+                    <div class=" title">
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">帳號</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">全球偏好設定</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="title">
+                        <h4>全球偏好設定</h4>
+                    </div>
                 </div>
-                <div class="col-md-7 left-container">
-                    <div class="personal-info-column">
-                        <div class="user-name item">
-                            <span>法定名稱</span>
-                            <span>
-                                <a class="edit-btn" data-bs-toggle="collapse" href="#collapse-user-name"
-                                    role="button" aria-expanded="false" aria-controls="collapse-user-name">
+                <div class="col-12 col-md-7 left-container my-5 ps-5">
+                    <div class="left-main-cotent">
+                        <div class="each-item">
+                            <h5>偏好語言</h5>
+                            <div>
+                                <a class="btn edit-btn" data-bs-toggle="collapse" href="#edit-btn" role="button"
+                                    aria-expanded="false" aria-controls="edit-btn">
                                     編輯
                                 </a>
-                            </span>
-                            <div class="collapse" id="collapse-user-name">
-                                <div class="card card-body">
-                                    <form action="#">
-                                        <label for="fname">名字</label>
-                                        <input type="text" id="fname" name="fname"><br><br>
-                                        <label for="lname">姓氏</label>
-                                        <input type="text" id="lname" name="lname"><br><br>
-                                        <input type="submit" value="儲存">
-                                    </form>
+                            </div>
+                        </div>
+                        <div class="collapse" id="edit-btn">
+                            <div>這會更新您在 Airbnb 上看到的內容，以及我們與您的溝通方式。</div>
+                            <div class="card card-body">
+                                <div class="dropdown-container">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdown-selector"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        中文(繁體)
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdown-selector">
+                                        <li><a class="dropdown-item" href="#">中文(繁體)</a></li>
+                                        <li><a class="dropdown-item" href="#">English</a></li>
+                                        <li><a class="dropdown-item" href="#">日本語</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <hr>
-                        <div class="gender item">
-                            <span>性別</span>
-                            <span>
-                                <a class="edit-btn" data-bs-toggle="collapse" href="#collapse-gender"
-                                    role="button" aria-expanded="false" aria-controls="collapse-gender">
+                        <div class="each-item">
+                            <h5>偏好幣別</h5>
+                            <div>
+                                <a class="btn edit-btn" data-bs-toggle="collapse" href="#edit-btn-currency" role="button"
+                                    aria-expanded="false" aria-controls="edit-btn-currency">
                                     編輯
                                 </a>
-                            </span>
-                            <div class="collapse" id="collapse-gender">
-                                <div class="card card-body">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button"
-                                            id="dropdown-gender" data-bs-toggle="dropdown" aria-expanded="false">
-                                            男性
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdown-gender">
-                                            <li><a class="dropdown-item" href="#">男性</a></li>
-                                            <li><a class="dropdown-item" href="#">女性</a></li>
-                                            <li><a class="dropdown-item" href="#">其他</a></li>
-                                        </ul>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="edit-btn-currency">
+                            <div class="card card-body">
+                                <div class="dropdown-container">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdown-selector"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        新台幣
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdown-selector">
+                                        <li><a class="dropdown-item" href="#">新台幣</a></li>
+                                        <li><a class="dropdown-item" href="#">美金</a></li>
+                                        <li><a class="dropdown-item" href="#">日元</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <hr>
-                        <div class="birthday item">
-                            <span>出生日期</span>
-                            <span>
-                                <a class="edit-btn" data-bs-toggle="collapse" href="#collapse-birthday"
-                                    role="button" aria-expanded="false" aria-controls="collapse-birthday">
+                        <div class="each-item">
+                            <h5>時區</h5>
+                            <div>
+                                <a class="btn edit-btn" data-bs-toggle="collapse" href="#edit-btn-time-zone" role="button"
+                                    aria-expanded="false" aria-controls="edit-btn-time-zone">
                                     編輯
                                 </a>
-                            </span>
-                        </div>
-                        <hr>
-                        <div class="email">
-                            <span>電子郵件地址</span>
-                            <span>
-                                <a class="edit-btn" data-bs-toggle="collapse" href="#collapse-email"
-                                    role="button" aria-expanded="false" aria-controls="collapse-email">
-                                    編輯
-                                </a>
-                            </span>
-                            <div class="collapse" id="collapse-email">
-                                <div class="card card-body">
-                                    <form action="#">
-                                        <label for="lname">電子郵件地址</label>
-                                        <input type="text" id="lname" name="lname"><br><br>
-                                        <input type="submit" value="儲存">
-                                    </form>
-                                </div>
                             </div>
                         </div>
-                        <hr>
-                        <div class="phone-number item">
-
-                        </div>
-                        <hr>
-                        <div class="identity item">
-
-                        </div>
-                        <div class="address item">
-
-                        </div>
-                        <hr>
-                        <div class="emergency_contact">
-
-                        </div>
-                        <hr>
-                        <div class="passport">
-
+                        <div class="collapse" id="edit-btn-time-zone">
+                            <div class="card card-body">
+                                <div class="dropdown-container">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdown-selector"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdown-selector">
+                                        <li><a class="dropdown-item" href="#"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4 m-3 left-container">
-                    <i class="fas fa-shopping-bag"></i>
+                <div class="col-12 col-md-3 right-container py-md-auto d-none d-md-block ms-md-5">
+                    <hr id="hr-sm-display">
+                    <i class="fas fa-sliders-h"></i>
+                    <h5>全球偏好設定</h5>
+                    <p>Airbnb 非常重視你的隱私。你可以使用此頁面選擇分享活動的方式。</p>
                 </div>
             </div>
-        </div>
     </section>
 
-
     <footer class="bg-light">
-        <div class="container-fluid m-3">
+        <div class="container-fluid">
             <div class="row justify-content-space-between">
                 <div class="col-12 col-md-3 border-bottom">
                     <ul>
@@ -227,6 +213,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>

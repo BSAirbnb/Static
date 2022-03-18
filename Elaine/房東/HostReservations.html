@@ -25,11 +25,19 @@
           <button type="button" class="btn btn_filter" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fas fa-filter"></i></i>篩選條件
           </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#"></a></li>
-            <li><a class="dropdown-item" href="#"></a></li>
-            <li><a class="dropdown-item" href="#"></a></li>
-          </ul>
+          <div class="dropdown-menu dropdown_menu_filter">
+            <p>篩選條件</p>
+            <p>按日期篩選</p>
+            <span>開始或結束於下列日期範圍的預訂</span>
+            <form>
+              <label>從
+                <input type="date" name="filter_from" value="從">
+                <span class="validity"></span>
+              </label>
+            </form>
+            <button class="btn button_filter_submit">套用</button>
+
+          </div>
         </div>
         <!-- 匯出Btn -->
         <div class="btn-group">
@@ -68,7 +76,7 @@
           </div>
 
           <!-- 動態生成 -->
-          <!-- <div class="reservations_upcoming">
+          <div class="reservations_upcoming">
             <table class="table table-striped">
               <thead>
                 <tr>
@@ -98,8 +106,8 @@
                   <td><button class="btn btn-primary text-white">詳細</button></td>
                 </tr>
               </tbody>
-            </table> -->
-          <!-- </div> -->
+            </table>
+          </div>
           <p class="share_your_oppinions">我們可以提供哪些協助，讓您管理預訂時更加輕鬆？<a href="#">分享您的意見</a> </p>
         </div>
 
