@@ -592,9 +592,9 @@
 
             <!-- 地圖 -->
             <div class="col-12 col-md-5 map-container d-md-block d-none">
-                <div class="map">
-                    <img class="mapimg w-100" src="./googlemap.png">
-                    <!-- <img class="mapimg w-100" src="https://picsum.photos/400/400/?random=10"> -->
+                <div class="mapbox">
+                    <!-- <img class="mapimg w-100" src="./googlemap.png"> -->
+                    <div id="map"></div>
                 </div>
             </div>
         </div>
@@ -1012,7 +1012,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <script src="./search.js"></script>
-    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNUeaLH8za5eiC7S-fwsQ5tJjqCnusKb0&callback=initMap"></script>
 </body>
 
 </html>

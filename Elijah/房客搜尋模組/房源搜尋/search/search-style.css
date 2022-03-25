@@ -8,11 +8,11 @@
     margin-top: 130px;
     /* height: 80%; */
 }
-.map{
+.mapbox{
     position:sticky;
     top: 130px;
 }
-.mapimg{
+#map{
     height: 80vh;
 }
 
