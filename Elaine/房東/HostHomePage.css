@@ -148,3 +148,52 @@ a {
     margin: 1em 0;
   }
 }
+
+/* swiper */
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  padding: 10px 0;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.host_your_orders_card {
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.p_currently_hosting {
+  color: #ff385c;
+  font-weight: 600;
+}
+
+.h2_host_room_title {
+  font-size: 20px;
+  color: #717171;
+}
+
+.p_guest_name {
+  font-size: 26px;
+  font-weight: bolder;
+  margin-bottom: 0;
+}
+
+.guest_info img {
+  width: 10%;
+  border-radius: 50%;
+}
