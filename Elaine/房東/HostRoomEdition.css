@@ -1,0 +1,103 @@
+.btn:focus {
+  box-shadow: none;
+}
+
+.host_room_edit_roomName_container h1 {
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.host_room_edit_roomName_container .btn {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* 預覽btn */
+.btn_preview_houselist {
+  border-radius: 8px;
+}
+
+/* tab */
+.nav-tabs .nav-item.show,
+.nav-tabs .nav-link.active {
+  border-color: transparent;
+  border-bottom: 2px solid #000;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.nav-link {
+  color: #717171;
+  font-weight: bolder;
+}
+
+.nav-link:hover {
+  color: #717171;
+  background-color: #f7f7f7;
+  border: transparent;
+}
+
+.edit_section {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2em;
+}
+
+/* 編輯btn */
+.btn_edit_room,
+.btn_price_and_order_satus {
+  margin: 1.5em 0;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* 編輯icon */
+.fa-angle-right {
+  padding: 0 10px;
+}
+
+/* 編輯照片 */
+.edit_room_img {
+  width: 30%;
+  margin-right: 20px;
+  height: 20%;
+}
+
+.edit_room_img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* 房客人數 */
+.edit_room_guestCount {
+  line-height: 4em;
+  padding: 0 15px;
+}
+
+/* 房客人數加減btn*/
+.btn_edit_room_minus,
+.btn_edit_room_plus {
+  color: #444;
+  border: 1px solid #979797;
+  border-radius: 100%;
+  margin: 1em 0;
+  padding: 0.2em 0.65em;
+  font-size: 16px;
+}
+
+.btn_your_opinions {
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 1.5em 0;
+}
+
+/* 房源詳情h2 */
+.h2_room_detail {
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.h3_room_detail {
+  font-size: 16px;
+}
