@@ -1,3 +1,15 @@
+p {
+  color: #717171;
+  margin-top: -2em;
+  font-size: 15px;
+}
+
+a {
+  color: #000;
+  font-weight: 700;
+  font-size: 15px;
+}
+
 .btn:focus {
   box-shadow: none;
 }
@@ -45,7 +57,9 @@
 
 /* 編輯btn */
 .btn_edit_room,
-.btn_price_and_order_satus {
+.btn_edit_price_and_order_status,
+.btn_edit_policy_and_rule,
+.btn_guest_info {
   margin: 1.5em 0;
   font-weight: 600;
   text-decoration: underline;
@@ -92,12 +106,75 @@
   padding: 1.5em 0;
 }
 
-/* 房源詳情h2 */
-.h2_room_detail {
+/* 編輯h2 */
+.h2_room_detail,
+.h2_price_and_order_satus,
+.h2_policy_and_rule,
+.h2_guest_info {
   font-weight: bolder;
   font-size: 18px;
 }
 
-.h3_room_detail {
+/* 編輯h3 */
+.h3_room_detail,
+.h3_price_and_order_satus,
+.h3_policy_and_rule,
+.h3_guest_info {
   font-size: 16px;
+  font-weight: 500;
+}
+
+/* 位置分享sapn(退訂後的地址隱藏功能)  */
+.span_edit_room_location_sharing {
+  font-size: 15px;
+  color: #717171;
+  margin-top: -15px;
+  display: block;
+}
+
+/* 房源與房型(房源類型) */
+.p_room_type {
+  margin-top: -15px;
+}
+
+/* 設備與服務span、房間與空間span */
+.edit_room_equipment_and_service span,
+.span_room_space {
+  color: #717171;
+  font-size: 15px;
+}
+
+/* 你須要為房源設定價格。 */
+.span_set_unit_price,
+.span_smart_setting_price,
+.span_basic_price {
+  font-size: 15px;
+  color: #717171;
+}
+
+.p_tax,
+.p_house_rules {
+  margin-top: -1em;
+}
+
+.p_suitable_for_children {
+  margin-top: 0;
+}
+
+.fa-times {
+  border: 1px solid #979797;
+  border-radius: 100%;
+  padding: 10px 13px;
+  color: #979797;
+}
+
+.fa-check {
+  border: 1px solid #979797;
+  border-radius: 100%;
+  padding: 10px 10px;
+  color: #979797;
+}
+
+.btn_edit_policy_and_rule_cross {
+  padding-right: 0px;
 }
